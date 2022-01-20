@@ -1,0 +1,3266 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>uutils Documentation</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+<style>
+    dd {
+        margin-bottom: 1em;
+    }
+    main {
+        position: relative;
+    }
+    .version {
+        position: absolute;
+        top: 1em;
+        right: 0;
+    }
+</style>        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded "><a href="installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">2.</strong> Contributing</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference</li><li class="chapter-item expanded "><a href="multicall.html"><strong aria-hidden="true">3.</strong> Multi-call binary</a></li><li class="chapter-item expanded "><a href="utils/index.html"><strong aria-hidden="true">4.</strong> Utils</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="utils/arch.html"><strong aria-hidden="true">4.1.</strong> arch</a></li><li class="chapter-item expanded "><a href="utils/base32.html"><strong aria-hidden="true">4.2.</strong> base32</a></li><li class="chapter-item expanded "><a href="utils/base64.html"><strong aria-hidden="true">4.3.</strong> base64</a></li><li class="chapter-item expanded "><a href="utils/basename.html"><strong aria-hidden="true">4.4.</strong> basename</a></li><li class="chapter-item expanded "><a href="utils/basenc.html"><strong aria-hidden="true">4.5.</strong> basenc</a></li><li class="chapter-item expanded "><a href="utils/cat.html"><strong aria-hidden="true">4.6.</strong> cat</a></li><li class="chapter-item expanded "><a href="utils/chcon.html"><strong aria-hidden="true">4.7.</strong> chcon</a></li><li class="chapter-item expanded "><a href="utils/chgrp.html"><strong aria-hidden="true">4.8.</strong> chgrp</a></li><li class="chapter-item expanded "><a href="utils/chmod.html"><strong aria-hidden="true">4.9.</strong> chmod</a></li><li class="chapter-item expanded "><a href="utils/chown.html"><strong aria-hidden="true">4.10.</strong> chown</a></li><li class="chapter-item expanded "><a href="utils/chroot.html"><strong aria-hidden="true">4.11.</strong> chroot</a></li><li class="chapter-item expanded "><a href="utils/cksum.html"><strong aria-hidden="true">4.12.</strong> cksum</a></li><li class="chapter-item expanded "><a href="utils/comm.html"><strong aria-hidden="true">4.13.</strong> comm</a></li><li class="chapter-item expanded "><a href="utils/cp.html"><strong aria-hidden="true">4.14.</strong> cp</a></li><li class="chapter-item expanded "><a href="utils/csplit.html"><strong aria-hidden="true">4.15.</strong> csplit</a></li><li class="chapter-item expanded "><a href="utils/cut.html"><strong aria-hidden="true">4.16.</strong> cut</a></li><li class="chapter-item expanded "><a href="utils/date.html"><strong aria-hidden="true">4.17.</strong> date</a></li><li class="chapter-item expanded "><a href="utils/dd.html"><strong aria-hidden="true">4.18.</strong> dd</a></li><li class="chapter-item expanded "><a href="utils/df.html"><strong aria-hidden="true">4.19.</strong> df</a></li><li class="chapter-item expanded "><a href="utils/dircolors.html"><strong aria-hidden="true">4.20.</strong> dircolors</a></li><li class="chapter-item expanded "><a href="utils/dirname.html"><strong aria-hidden="true">4.21.</strong> dirname</a></li><li class="chapter-item expanded "><a href="utils/du.html"><strong aria-hidden="true">4.22.</strong> du</a></li><li class="chapter-item expanded "><a href="utils/echo.html"><strong aria-hidden="true">4.23.</strong> echo</a></li><li class="chapter-item expanded "><a href="utils/env.html"><strong aria-hidden="true">4.24.</strong> env</a></li><li class="chapter-item expanded "><a href="utils/expand.html"><strong aria-hidden="true">4.25.</strong> expand</a></li><li class="chapter-item expanded "><a href="utils/expr.html"><strong aria-hidden="true">4.26.</strong> expr</a></li><li class="chapter-item expanded "><a href="utils/factor.html"><strong aria-hidden="true">4.27.</strong> factor</a></li><li class="chapter-item expanded "><a href="utils/false.html"><strong aria-hidden="true">4.28.</strong> false</a></li><li class="chapter-item expanded "><a href="utils/fmt.html"><strong aria-hidden="true">4.29.</strong> fmt</a></li><li class="chapter-item expanded "><a href="utils/fold.html"><strong aria-hidden="true">4.30.</strong> fold</a></li><li class="chapter-item expanded "><a href="utils/groups.html"><strong aria-hidden="true">4.31.</strong> groups</a></li><li class="chapter-item expanded "><a href="utils/hashsum.html"><strong aria-hidden="true">4.32.</strong> hashsum</a></li><li class="chapter-item expanded "><a href="utils/head.html"><strong aria-hidden="true">4.33.</strong> head</a></li><li class="chapter-item expanded "><a href="utils/hostid.html"><strong aria-hidden="true">4.34.</strong> hostid</a></li><li class="chapter-item expanded "><a href="utils/hostname.html"><strong aria-hidden="true">4.35.</strong> hostname</a></li><li class="chapter-item expanded "><a href="utils/id.html"><strong aria-hidden="true">4.36.</strong> id</a></li><li class="chapter-item expanded "><a href="utils/install.html"><strong aria-hidden="true">4.37.</strong> install</a></li><li class="chapter-item expanded "><a href="utils/join.html"><strong aria-hidden="true">4.38.</strong> join</a></li><li class="chapter-item expanded "><a href="utils/kill.html"><strong aria-hidden="true">4.39.</strong> kill</a></li><li class="chapter-item expanded "><a href="utils/link.html"><strong aria-hidden="true">4.40.</strong> link</a></li><li class="chapter-item expanded "><a href="utils/ln.html"><strong aria-hidden="true">4.41.</strong> ln</a></li><li class="chapter-item expanded "><a href="utils/logname.html"><strong aria-hidden="true">4.42.</strong> logname</a></li><li class="chapter-item expanded "><a href="utils/ls.html"><strong aria-hidden="true">4.43.</strong> ls</a></li><li class="chapter-item expanded "><a href="utils/mkdir.html"><strong aria-hidden="true">4.44.</strong> mkdir</a></li><li class="chapter-item expanded "><a href="utils/mkfifo.html"><strong aria-hidden="true">4.45.</strong> mkfifo</a></li><li class="chapter-item expanded "><a href="utils/mknod.html"><strong aria-hidden="true">4.46.</strong> mknod</a></li><li class="chapter-item expanded "><a href="utils/mktemp.html"><strong aria-hidden="true">4.47.</strong> mktemp</a></li><li class="chapter-item expanded "><a href="utils/more.html"><strong aria-hidden="true">4.48.</strong> more</a></li><li class="chapter-item expanded "><a href="utils/mv.html"><strong aria-hidden="true">4.49.</strong> mv</a></li><li class="chapter-item expanded "><a href="utils/nice.html"><strong aria-hidden="true">4.50.</strong> nice</a></li><li class="chapter-item expanded "><a href="utils/nl.html"><strong aria-hidden="true">4.51.</strong> nl</a></li><li class="chapter-item expanded "><a href="utils/nohup.html"><strong aria-hidden="true">4.52.</strong> nohup</a></li><li class="chapter-item expanded "><a href="utils/nproc.html"><strong aria-hidden="true">4.53.</strong> nproc</a></li><li class="chapter-item expanded "><a href="utils/numfmt.html"><strong aria-hidden="true">4.54.</strong> numfmt</a></li><li class="chapter-item expanded "><a href="utils/od.html"><strong aria-hidden="true">4.55.</strong> od</a></li><li class="chapter-item expanded "><a href="utils/paste.html"><strong aria-hidden="true">4.56.</strong> paste</a></li><li class="chapter-item expanded "><a href="utils/pathchk.html"><strong aria-hidden="true">4.57.</strong> pathchk</a></li><li class="chapter-item expanded "><a href="utils/pinky.html"><strong aria-hidden="true">4.58.</strong> pinky</a></li><li class="chapter-item expanded "><a href="utils/pr.html"><strong aria-hidden="true">4.59.</strong> pr</a></li><li class="chapter-item expanded "><a href="utils/printenv.html"><strong aria-hidden="true">4.60.</strong> printenv</a></li><li class="chapter-item expanded "><a href="utils/printf.html"><strong aria-hidden="true">4.61.</strong> printf</a></li><li class="chapter-item expanded "><a href="utils/ptx.html"><strong aria-hidden="true">4.62.</strong> ptx</a></li><li class="chapter-item expanded "><a href="utils/pwd.html"><strong aria-hidden="true">4.63.</strong> pwd</a></li><li class="chapter-item expanded "><a href="utils/readlink.html"><strong aria-hidden="true">4.64.</strong> readlink</a></li><li class="chapter-item expanded "><a href="utils/realpath.html"><strong aria-hidden="true">4.65.</strong> realpath</a></li><li class="chapter-item expanded "><a href="utils/relpath.html"><strong aria-hidden="true">4.66.</strong> relpath</a></li><li class="chapter-item expanded "><a href="utils/rm.html"><strong aria-hidden="true">4.67.</strong> rm</a></li><li class="chapter-item expanded "><a href="utils/rmdir.html"><strong aria-hidden="true">4.68.</strong> rmdir</a></li><li class="chapter-item expanded "><a href="utils/runcon.html"><strong aria-hidden="true">4.69.</strong> runcon</a></li><li class="chapter-item expanded "><a href="utils/seq.html"><strong aria-hidden="true">4.70.</strong> seq</a></li><li class="chapter-item expanded "><a href="utils/shred.html"><strong aria-hidden="true">4.71.</strong> shred</a></li><li class="chapter-item expanded "><a href="utils/shuf.html"><strong aria-hidden="true">4.72.</strong> shuf</a></li><li class="chapter-item expanded "><a href="utils/sleep.html"><strong aria-hidden="true">4.73.</strong> sleep</a></li><li class="chapter-item expanded "><a href="utils/sort.html"><strong aria-hidden="true">4.74.</strong> sort</a></li><li class="chapter-item expanded "><a href="utils/split.html"><strong aria-hidden="true">4.75.</strong> split</a></li><li class="chapter-item expanded "><a href="utils/stat.html"><strong aria-hidden="true">4.76.</strong> stat</a></li><li class="chapter-item expanded "><a href="utils/stdbuf.html"><strong aria-hidden="true">4.77.</strong> stdbuf</a></li><li class="chapter-item expanded "><a href="utils/sum.html"><strong aria-hidden="true">4.78.</strong> sum</a></li><li class="chapter-item expanded "><a href="utils/sync.html"><strong aria-hidden="true">4.79.</strong> sync</a></li><li class="chapter-item expanded "><a href="utils/tac.html"><strong aria-hidden="true">4.80.</strong> tac</a></li><li class="chapter-item expanded "><a href="utils/tail.html"><strong aria-hidden="true">4.81.</strong> tail</a></li><li class="chapter-item expanded "><a href="utils/tee.html"><strong aria-hidden="true">4.82.</strong> tee</a></li><li class="chapter-item expanded "><a href="utils/test.html"><strong aria-hidden="true">4.83.</strong> test</a></li><li class="chapter-item expanded "><a href="utils/timeout.html"><strong aria-hidden="true">4.84.</strong> timeout</a></li><li class="chapter-item expanded "><a href="utils/touch.html"><strong aria-hidden="true">4.85.</strong> touch</a></li><li class="chapter-item expanded "><a href="utils/tr.html"><strong aria-hidden="true">4.86.</strong> tr</a></li><li class="chapter-item expanded "><a href="utils/true.html"><strong aria-hidden="true">4.87.</strong> true</a></li><li class="chapter-item expanded "><a href="utils/truncate.html"><strong aria-hidden="true">4.88.</strong> truncate</a></li><li class="chapter-item expanded "><a href="utils/tsort.html"><strong aria-hidden="true">4.89.</strong> tsort</a></li><li class="chapter-item expanded "><a href="utils/tty.html"><strong aria-hidden="true">4.90.</strong> tty</a></li><li class="chapter-item expanded "><a href="utils/uname.html"><strong aria-hidden="true">4.91.</strong> uname</a></li><li class="chapter-item expanded "><a href="utils/unexpand.html"><strong aria-hidden="true">4.92.</strong> unexpand</a></li><li class="chapter-item expanded "><a href="utils/uniq.html"><strong aria-hidden="true">4.93.</strong> uniq</a></li><li class="chapter-item expanded "><a href="utils/unlink.html"><strong aria-hidden="true">4.94.</strong> unlink</a></li><li class="chapter-item expanded "><a href="utils/uptime.html"><strong aria-hidden="true">4.95.</strong> uptime</a></li><li class="chapter-item expanded "><a href="utils/users.html"><strong aria-hidden="true">4.96.</strong> users</a></li><li class="chapter-item expanded "><a href="utils/wc.html"><strong aria-hidden="true">4.97.</strong> wc</a></li><li class="chapter-item expanded "><a href="utils/who.html"><strong aria-hidden="true">4.98.</strong> who</a></li><li class="chapter-item expanded "><a href="utils/whoami.html"><strong aria-hidden="true">4.99.</strong> whoami</a></li><li class="chapter-item expanded "><a href="utils/yes.html"><strong aria-hidden="true">4.100.</strong> yes</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">uutils Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/rust-lang/cargo/tree/master/src/doc/src" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="uutils-coreutils-documentation"><a class="header" href="#uutils-coreutils-documentation">uutils Coreutils Documentation</a></h1>
+<p>uutils is an attempt at writing universal (as in cross-platform) CLI
+utilities in <a href="https://www.rust-lang.org">Rust</a>. It is available for
+Linux, Windows, Mac and other platforms.</p>
+<p>The API reference for <code>uucore</code>, the library of functions shared between
+various utils, is hosted at at
+<a href="https://docs.rs/uucore/0.0.12/uucore/">docs.rs</a>.</p>
+<p>uutils is licensed under the <a href="https://github.com/uutils/coreutils/LICENSE.md">MIT License</a>.</p>
+<h2 id="useful-links"><a class="header" href="#useful-links">Useful links</a></h2>
+<ul>
+<li><a href="https://github.com/uutils/coreutils/releases">Releases</a></li>
+<li><a href="https://github.com/uutils/coreutils">Source Code</a></li>
+<li><a href="https://github.com/uutils/coreutils/issues">Issues</a></li>
+<li><a href="https://discord.gg/wQVJbvJ">Discord</a></li>
+</ul>
+<blockquote>
+<p>Note: This manual is automatically generated from the source code and is
+a work in progress.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
+<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
+<ul>
+<li>Rust (<code>cargo</code>, <code>rustc</code>)</li>
+<li>GNU Make (optional)</li>
+</ul>
+<h3 id="rust-version"><a class="header" href="#rust-version">Rust Version</a></h3>
+<p>uutils follows Rust's release channels and is tested against stable, beta and nightly.
+The current oldest supported version of the Rust compiler is <code>1.54</code>.</p>
+<p>On both Windows and Redox, only the nightly version is tested currently.</p>
+<h2 id="build-instructions"><a class="header" href="#build-instructions">Build Instructions</a></h2>
+<p>There are currently two methods to build the uutils binaries: either Cargo
+or GNU Make.</p>
+<blockquote>
+<p>Building the full package, including all documentation, requires both Cargo
+and Gnu Make on a Unix platform.</p>
+</blockquote>
+<p>For either method, we first need to fetch the repository:</p>
+<pre><code class="language-bash">$ git clone https://github.com/uutils/coreutils
+$ cd coreutils
+</code></pre>
+<h3 id="cargo"><a class="header" href="#cargo">Cargo</a></h3>
+<p>Building uutils using Cargo is easy because the process is the same as for
+every other Rust program:</p>
+<pre><code class="language-bash">$ cargo build --release
+</code></pre>
+<p>This command builds the most portable common core set of uutils into a multicall
+(BusyBox-type) binary, named 'coreutils', on most Rust-supported platforms.</p>
+<p>Additional platform-specific uutils are often available. Building these
+expanded sets of uutils for a platform (on that platform) is as simple as
+specifying it as a feature:</p>
+<pre><code class="language-bash">$ cargo build --release --features macos
+# or ...
+$ cargo build --release --features windows
+# or ...
+$ cargo build --release --features unix
+</code></pre>
+<p>If you don't want to build every utility available on your platform into the
+final binary, you can also specify which ones you want to build manually.
+For example:</p>
+<pre><code class="language-bash">$ cargo build --features &quot;base32 cat echo rm&quot; --no-default-features
+</code></pre>
+<p>If you don't want to build the multicall binary and would prefer to build
+the utilities as individual binaries, that is also possible. Each utility
+is contained in its own package within the main repository, named
+&quot;uu_UTILNAME&quot;. To build individual utilities, use cargo to build just the
+specific packages (using the <code>--package</code> [aka <code>-p</code>] option). For example:</p>
+<pre><code class="language-bash">$ cargo build -p uu_base32 -p uu_cat -p uu_echo -p uu_rm
+</code></pre>
+<h3 id="gnu-make"><a class="header" href="#gnu-make">GNU Make</a></h3>
+<p>Building using <code>make</code> is a simple process as well.</p>
+<p>To simply build all available utilities:</p>
+<pre><code class="language-bash">$ make
+</code></pre>
+<p>To build all but a few of the available utilities:</p>
+<pre><code class="language-bash">$ make SKIP_UTILS='UTILITY_1 UTILITY_2'
+</code></pre>
+<p>To build only a few of the available utilities:</p>
+<pre><code class="language-bash">$ make UTILS='UTILITY_1 UTILITY_2'
+</code></pre>
+<h2 id="installation-instructions"><a class="header" href="#installation-instructions">Installation Instructions</a></h2>
+<h3 id="cargo-1"><a class="header" href="#cargo-1">Cargo</a></h3>
+<p>Likewise, installing can simply be done using:</p>
+<pre><code class="language-bash">$ cargo install --path .
+</code></pre>
+<p>This command will install uutils into Cargo's <em>bin</em> folder (<em>e.g.</em> <code>$HOME/.cargo/bin</code>).</p>
+<p>This does not install files necessary for shell completion. For shell completion to work,
+use <code>GNU Make</code> or see <code>Manually install shell completions</code>.</p>
+<h3 id="gnu-make-1"><a class="header" href="#gnu-make-1">GNU Make</a></h3>
+<p>To install all available utilities:</p>
+<pre><code class="language-bash">$ make install
+</code></pre>
+<p>To install using <code>sudo</code> switch <code>-E</code> must be used:</p>
+<pre><code class="language-bash">$ sudo -E make install
+</code></pre>
+<p>To install all but a few of the available utilities:</p>
+<pre><code class="language-bash">$ make SKIP_UTILS='UTILITY_1 UTILITY_2' install
+</code></pre>
+<p>To install only a few of the available utilities:</p>
+<pre><code class="language-bash">$ make UTILS='UTILITY_1 UTILITY_2' install
+</code></pre>
+<p>To install every program with a prefix (e.g. uu-echo uu-cat):</p>
+<pre><code class="language-bash">$ make PROG_PREFIX=PREFIX_GOES_HERE install
+</code></pre>
+<p>To install the multicall binary:</p>
+<pre><code class="language-bash">$ make MULTICALL=y install
+</code></pre>
+<p>Set install parent directory (default value is /usr/local):</p>
+<pre><code class="language-bash"># DESTDIR is also supported
+$ make PREFIX=/my/path install
+</code></pre>
+<p>Installing with <code>make</code> installs shell completions for all installed utilities
+for <code>bash</code>, <code>fish</code> and <code>zsh</code>. Completions for <code>elvish</code> and <code>powershell</code> can also
+be generated; See <code>Manually install shell completions</code>.</p>
+<h3 id="nixos"><a class="header" href="#nixos">NixOS</a></h3>
+<p>The <a href="https://nixos.org/nixpkgs/manual/">standard package set</a> of <a href="https://nixos.org/">NixOS</a>
+provides this package out of the box since 18.03:</p>
+<pre><code class="language-shell">$ nix-env -iA nixos.uutils-coreutils
+</code></pre>
+<h3 id="manually-install-shell-completions"><a class="header" href="#manually-install-shell-completions">Manually install shell completions</a></h3>
+<p>The <code>coreutils</code> binary can generate completions for the <code>bash</code>, <code>elvish</code>, <code>fish</code>, <code>powershell</code>
+and <code>zsh</code> shells. It prints the result to stdout.</p>
+<p>The syntax is:</p>
+<pre><code class="language-bash">cargo run completion &lt;utility&gt; &lt;shell&gt;
+</code></pre>
+<p>So, to install completions for <code>ls</code> on <code>bash</code> to <code>/usr/local/share/bash-completion/completions/ls</code>,
+run:</p>
+<pre><code class="language-bash">cargo run completion ls bash &gt; /usr/local/share/bash-completion/completions/ls
+</code></pre>
+<h2 id="un-installation-instructions"><a class="header" href="#un-installation-instructions">Un-installation Instructions</a></h2>
+<p>Un-installation differs depending on how you have installed uutils.  If you used
+Cargo to install, use Cargo to uninstall.  If you used GNU Make to install, use
+Make to uninstall.</p>
+<h3 id="cargo-2"><a class="header" href="#cargo-2">Cargo</a></h3>
+<p>To uninstall uutils:</p>
+<pre><code class="language-bash">$ cargo uninstall uutils
+</code></pre>
+<h3 id="gnu-make-2"><a class="header" href="#gnu-make-2">GNU Make</a></h3>
+<p>To uninstall all utilities:</p>
+<pre><code class="language-bash">$ make uninstall
+</code></pre>
+<p>To uninstall every program with a set prefix:</p>
+<pre><code class="language-bash">$ make PROG_PREFIX=PREFIX_GOES_HERE uninstall
+</code></pre>
+<p>To uninstall the multicall binary:</p>
+<pre><code class="language-bash">$ make MULTICALL=y uninstall
+</code></pre>
+<p>To uninstall from a custom parent directory:</p>
+<pre><code class="language-bash"># DESTDIR is also supported
+$ make PREFIX=/my/path uninstall
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contributing-to-coreutils"><a class="header" href="#contributing-to-coreutils">Contributing to coreutils</a></h1>
+<p>Contributions are very welcome, and should target Rust's master branch until the
+standard libraries are stabilized. You may <em>claim</em> an item on the to-do list by
+following these steps:</p>
+<ol>
+<li>Open an issue named &quot;Implement [the utility of your choice]&quot;, e.g. &quot;Implement
+ls&quot;.</li>
+<li>State that you are working on this utility.</li>
+<li>Develop the utility.</li>
+<li>Add integration tests.</li>
+<li>Add the reference to your utility into Cargo.toml and Makefile.</li>
+<li>Remove utility from the to-do list in the README.</li>
+<li>Submit a pull request and close the issue.</li>
+</ol>
+<p>The steps above imply that, before starting to work on a utility, you should
+search the issues to make sure no one else is working on it.</p>
+<h2 id="best-practices"><a class="header" href="#best-practices">Best practices</a></h2>
+<ol>
+<li>Follow what GNU is doing in terms of options and behavior. It is recommended
+to look at the GNU Coreutils manual (<a href="https://www.gnu.org/software/coreutils/manual/html_node/index.html">on the
+web</a>, or
+locally using <code>info &lt;utility&gt;</code>). It is more in depth than the man pages and
+provides a good description of available features and their implementation
+details.</li>
+<li>If possible, look at the GNU test suite execution in the CI and make the test
+work if failing.</li>
+<li>Use clap for argument management.</li>
+<li>Make sure that the code coverage is covering all of the cases, including
+errors.</li>
+<li>The code must be clippy-warning-free and rustfmt-compliant.</li>
+<li>Don't hesitate to move common functions into uucore if they can be reused by
+other binaries.</li>
+<li>Unsafe code should be documented with Safety comments.</li>
+<li>uutils is original code. It cannot contain code from existing GNU or Unix-like
+utilities, nor should it link to or reference GNU libraries.</li>
+</ol>
+<h2 id="commit-messages"><a class="header" href="#commit-messages">Commit messages</a></h2>
+<p>To help the project maintainers review pull requests from contributors across
+numerous utilities, the team has settled on conventions for commit messages.</p>
+<p>From http://git-scm.com/book/ch5-2.html:</p>
+<pre><code>Short (50 chars or less) summary of changes
+
+More detailed explanatory text, if necessary.  Wrap it to about 72
+characters or so.  In some contexts, the first line is treated as the
+subject of an email and the rest of the text as the body.  The blank
+line separating the summary from the body is critical (unless you omit
+the body entirely); tools like rebase can get confused if you run the
+two together.
+
+Further paragraphs come after blank lines.
+
+  - Bullet points are okay, too
+
+  - Typically a hyphen or asterisk is used for the bullet, preceded by a
+    single space, with blank lines in between, but conventions vary here
+</code></pre>
+<p>Furthermore, here are a few examples for a summary line:</p>
+<ul>
+<li>commit for a single utility</li>
+</ul>
+<pre><code>nohup: cleanup and refactor
+</code></pre>
+<ul>
+<li>commit for a utility's tests</li>
+</ul>
+<pre><code>tests/rm: test new feature
+</code></pre>
+<p>Beyond changes to an individual utility or its tests, other summary
+lines for non-utility modules include:</p>
+<pre><code>README: add help
+</code></pre>
+<pre><code>uucore: add new modules
+</code></pre>
+<pre><code>uutils: add new utility
+</code></pre>
+<pre><code>gitignore: add temporary files
+</code></pre>
+<h2 id="licensing"><a class="header" href="#licensing">Licensing</a></h2>
+<p>uutils is distributed under the terms of the MIT License; see the <code>LICENSE</code> file
+for details. This is a permissive license, which allows the software to be used
+with few restrictions.</p>
+<p>Copyrights in the uutils project are retained by their contributors, and no
+copyright assignment is required to contribute.</p>
+<p>If you wish to add or change dependencies as part of a contribution to the
+project, a tool like <code>cargo-license</code> can be used to show their license details.
+The following types of license are acceptable:</p>
+<ul>
+<li>MIT License</li>
+<li>Dual- or tri-license with an MIT License option (&quot;Apache-2.0 or MIT&quot; is a
+popular combination)</li>
+<li>&quot;MIT equivalent&quot; license (2-clause BSD, 3-clause BSD, ISC)</li>
+<li>License less restrictive than the MIT License (CC0 1.0 Universal)</li>
+<li>Apache License version 2.0</li>
+</ul>
+<p>Licenses we will not use:</p>
+<ul>
+<li>An ambiguous license, or no license</li>
+<li>Strongly reciprocal licenses (GNU GPL, GNU LGPL)</li>
+</ul>
+<p>If you wish to add a reference but it doesn't meet these requirements, please
+raise an issue to describe the dependency.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="multi-call-binary"><a class="header" href="#multi-call-binary">Multi-call binary</a></h1>
+<p>uutils includes a multi-call binary from which the utils can be invoked. This
+reduces the binary size of the binary and can be useful for portability.</p>
+<p>The first argument of the multi-call binary is the util to run, after which
+the regular arguments to the util can be passed.</p>
+<pre><code class="language-shell">coreutils [util] [util options]
+</code></pre>
+<p>The <code>--help</code> flag will print a list of available utils.</p>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<pre><code>coreutils ls -l
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="utils"><a class="header" href="#utils">Utils</a></h1>
+<ul>
+<li><a href="utils/./arch.html">arch</a></li>
+<li><a href="utils/./base32.html">base32</a></li>
+<li><a href="utils/./base64.html">base64</a></li>
+<li><a href="utils/./basename.html">basename</a></li>
+<li><a href="utils/./basenc.html">basenc</a></li>
+<li><a href="utils/./cat.html">cat</a></li>
+<li><a href="utils/./chcon.html">chcon</a></li>
+<li><a href="utils/./chgrp.html">chgrp</a></li>
+<li><a href="utils/./chmod.html">chmod</a></li>
+<li><a href="utils/./chown.html">chown</a></li>
+<li><a href="utils/./chroot.html">chroot</a></li>
+<li><a href="utils/./cksum.html">cksum</a></li>
+<li><a href="utils/./comm.html">comm</a></li>
+<li><a href="utils/./cp.html">cp</a></li>
+<li><a href="utils/./csplit.html">csplit</a></li>
+<li><a href="utils/./cut.html">cut</a></li>
+<li><a href="utils/./date.html">date</a></li>
+<li><a href="utils/./dd.html">dd</a></li>
+<li><a href="utils/./df.html">df</a></li>
+<li><a href="utils/./dircolors.html">dircolors</a></li>
+<li><a href="utils/./dirname.html">dirname</a></li>
+<li><a href="utils/./du.html">du</a></li>
+<li><a href="utils/./echo.html">echo</a></li>
+<li><a href="utils/./env.html">env</a></li>
+<li><a href="utils/./expand.html">expand</a></li>
+<li><a href="utils/./expr.html">expr</a></li>
+<li><a href="utils/./factor.html">factor</a></li>
+<li><a href="utils/./false.html">false</a></li>
+<li><a href="utils/./fmt.html">fmt</a></li>
+<li><a href="utils/./fold.html">fold</a></li>
+<li><a href="utils/./groups.html">groups</a></li>
+<li><a href="utils/./hashsum.html">hashsum</a></li>
+<li><a href="utils/./head.html">head</a></li>
+<li><a href="utils/./hostid.html">hostid</a></li>
+<li><a href="utils/./hostname.html">hostname</a></li>
+<li><a href="utils/./id.html">id</a></li>
+<li><a href="utils/./install.html">install</a></li>
+<li><a href="utils/./join.html">join</a></li>
+<li><a href="utils/./kill.html">kill</a></li>
+<li><a href="utils/./link.html">link</a></li>
+<li><a href="utils/./ln.html">ln</a></li>
+<li><a href="utils/./logname.html">logname</a></li>
+<li><a href="utils/./ls.html">ls</a></li>
+<li><a href="utils/./mkdir.html">mkdir</a></li>
+<li><a href="utils/./mkfifo.html">mkfifo</a></li>
+<li><a href="utils/./mknod.html">mknod</a></li>
+<li><a href="utils/./mktemp.html">mktemp</a></li>
+<li><a href="utils/./more.html">more</a></li>
+<li><a href="utils/./mv.html">mv</a></li>
+<li><a href="utils/./nice.html">nice</a></li>
+<li><a href="utils/./nl.html">nl</a></li>
+<li><a href="utils/./nohup.html">nohup</a></li>
+<li><a href="utils/./nproc.html">nproc</a></li>
+<li><a href="utils/./numfmt.html">numfmt</a></li>
+<li><a href="utils/./od.html">od</a></li>
+<li><a href="utils/./paste.html">paste</a></li>
+<li><a href="utils/./pathchk.html">pathchk</a></li>
+<li><a href="utils/./pinky.html">pinky</a></li>
+<li><a href="utils/./pr.html">pr</a></li>
+<li><a href="utils/./printenv.html">printenv</a></li>
+<li><a href="utils/./printf.html">printf</a></li>
+<li><a href="utils/./ptx.html">ptx</a></li>
+<li><a href="utils/./pwd.html">pwd</a></li>
+<li><a href="utils/./readlink.html">readlink</a></li>
+<li><a href="utils/./realpath.html">realpath</a></li>
+<li><a href="utils/./relpath.html">relpath</a></li>
+<li><a href="utils/./rm.html">rm</a></li>
+<li><a href="utils/./rmdir.html">rmdir</a></li>
+<li><a href="utils/./runcon.html">runcon</a></li>
+<li><a href="utils/./seq.html">seq</a></li>
+<li><a href="utils/./shred.html">shred</a></li>
+<li><a href="utils/./shuf.html">shuf</a></li>
+<li><a href="utils/./sleep.html">sleep</a></li>
+<li><a href="utils/./sort.html">sort</a></li>
+<li><a href="utils/./split.html">split</a></li>
+<li><a href="utils/./stat.html">stat</a></li>
+<li><a href="utils/./stdbuf.html">stdbuf</a></li>
+<li><a href="utils/./sum.html">sum</a></li>
+<li><a href="utils/./sync.html">sync</a></li>
+<li><a href="utils/./tac.html">tac</a></li>
+<li><a href="utils/./tail.html">tail</a></li>
+<li><a href="utils/./tee.html">tee</a></li>
+<li><a href="utils/./test.html">test</a></li>
+<li><a href="utils/./timeout.html">timeout</a></li>
+<li><a href="utils/./touch.html">touch</a></li>
+<li><a href="utils/./tr.html">tr</a></li>
+<li><a href="utils/./true.html">true</a></li>
+<li><a href="utils/./truncate.html">truncate</a></li>
+<li><a href="utils/./tsort.html">tsort</a></li>
+<li><a href="utils/./tty.html">tty</a></li>
+<li><a href="utils/./uname.html">uname</a></li>
+<li><a href="utils/./unexpand.html">unexpand</a></li>
+<li><a href="utils/./uniq.html">uniq</a></li>
+<li><a href="utils/./unlink.html">unlink</a></li>
+<li><a href="utils/./uptime.html">uptime</a></li>
+<li><a href="utils/./users.html">users</a></li>
+<li><a href="utils/./wc.html">wc</a></li>
+<li><a href="utils/./who.html">who</a></li>
+<li><a href="utils/./whoami.html">whoami</a></li>
+<li><a href="utils/./yes.html">yes</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="arch"><a class="header" href="#arch">arch</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
+Display machine architecture
+<h2 id="options"><a class="header" href="#options">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="base32"><a class="header" href="#base32">base32</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-1"><a class="header" href="#summary-1">Summary</a></h2>
+<p>With no FILE, or when FILE is -, read standard input.</p>
+<p>The data are encoded as described for the base32 alphabet in RFC
+4648. When decoding, the input may contain newlines in addition
+to the bytes of the formal base32 alphabet. Use --ignore-garbage
+to attempt to recover from any other non-alphabet bytes in the
+encoded stream.</p>
+<h2 id="options-1"><a class="header" href="#options-1">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--decode</code>, <code>-d</code></dt>
+<dd>decode data</dd>
+<dt><code>--ignore-garbage</code>, <code>-i</code></dt>
+<dd>when decoding, ignore non-alphabetic characters</dd>
+<dt><code>--wrap</code>, <code>-w</code></dt>
+<dd>wrap encoded lines after COLS character (default 76, 0 to disable wrapping)</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="base64"><a class="header" href="#base64">base64</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-2"><a class="header" href="#summary-2">Summary</a></h2>
+<p>With no FILE, or when FILE is -, read standard input.</p>
+<p>The data are encoded as described for the base32 alphabet in RFC
+4648. When decoding, the input may contain newlines in addition
+to the bytes of the formal base32 alphabet. Use --ignore-garbage
+to attempt to recover from any other non-alphabet bytes in the
+encoded stream.</p>
+<h2 id="options-2"><a class="header" href="#options-2">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--decode</code>, <code>-d</code></dt>
+<dd>decode data</dd>
+<dt><code>--ignore-garbage</code>, <code>-i</code></dt>
+<dd>when decoding, ignore non-alphabetic characters</dd>
+<dt><code>--wrap</code>, <code>-w</code></dt>
+<dd>wrap encoded lines after COLS character (default 76, 0 to disable wrapping)</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basename"><a class="header" href="#basename">basename</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-3"><a class="header" href="#summary-3">Summary</a></h2>
+Print NAME with any leading directory components removed
+If specified, also remove a trailing SUFFIX
+<h2 id="options-3"><a class="header" href="#options-3">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--multiple</code>, <code>-a</code></dt>
+<dd>support multiple arguments and treat each as a NAME</dd>
+<dt></dt>
+<dd></dd>
+<dt><code>--suffix</code>, <code>-s</code></dt>
+<dd>remove a trailing SUFFIX; implies -a</dd>
+<dt><code>--zero</code>, <code>-z</code></dt>
+<dd>end each output line with NUL, not newline</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basenc"><a class="header" href="#basenc">basenc</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-4"><a class="header" href="#summary-4">Summary</a></h2>
+<p>With no FILE, or when FILE is -, read standard input.</p>
+<p>When decoding, the input may contain newlines in addition to the bytes of
+the formal alphabet. Use --ignore-garbage to attempt to recover
+from any other non-alphabet bytes in the encoded stream.</p>
+<h2 id="options-4"><a class="header" href="#options-4">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--decode</code>, <code>-d</code></dt>
+<dd>decode data</dd>
+<dt><code>--ignore-garbage</code>, <code>-i</code></dt>
+<dd>when decoding, ignore non-alphabetic characters</dd>
+<dt><code>--wrap</code>, <code>-w</code></dt>
+<dd>wrap encoded lines after COLS character (default 76, 0 to disable wrapping)</dd>
+<dt></dt>
+<dd></dd>
+<dt><code>--base64</code></dt>
+<dd></dd>
+<dt><code>--base64url</code></dt>
+<dd></dd>
+<dt><code>--base32</code></dt>
+<dd></dd>
+<dt><code>--base32hex</code></dt>
+<dd></dd>
+<dt><code>--base16</code></dt>
+<dd></dd>
+<dt><code>--base2lsbf</code></dt>
+<dd></dd>
+<dt><code>--base2msbf</code></dt>
+<dd></dd>
+<dt><code>--z85</code></dt>
+<dd></dd>
+<dt><code>--base2l</code></dt>
+<dd></dd>
+<dt><code>--base2m</code></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cat"><a class="header" href="#cat">cat</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-5"><a class="header" href="#summary-5">Summary</a></h2>
+Concatenate FILE(s), or standard input, to standard output
+ With no FILE, or when FILE is -, read standard input.
+<h2 id="options-5"><a class="header" href="#options-5">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+<dt><code>--show-all</code>, <code>-A</code></dt>
+<dd>equivalent to -vET</dd>
+<dt><code>--number-nonblank</code>, <code>-b</code></dt>
+<dd>number nonempty output lines, overrides -n</dd>
+<dt><code>-e</code></dt>
+<dd>equivalent to -vE</dd>
+<dt><code>--show-ends</code>, <code>-E</code></dt>
+<dd>display $ at end of each line</dd>
+<dt><code>--number</code>, <code>-n</code></dt>
+<dd>number all output lines</dd>
+<dt><code>--squeeze-blank</code>, <code>-s</code></dt>
+<dd>suppress repeated empty output lines</dd>
+<dt><code>--t</code>, <code>-t</code></dt>
+<dd>equivalent to -vT</dd>
+<dt><code>--show-tabs</code>, <code>-T</code></dt>
+<dd>display TAB characters at ^I</dd>
+<dt><code>--show-nonprinting</code>, <code>-v</code></dt>
+<dd>use ^ and M- notation, except for LF (\n) and TAB (\t)</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chcon"><a class="header" href="#chcon">chcon</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-6"><a class="header" href="#summary-6">Summary</a></h2>
+Change the SELinux security context of each FILE to CONTEXT. 
+With --reference, change the security context of each FILE to that of RFILE.
+<h2 id="options-6"><a class="header" href="#options-6">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--dereference</code></dt>
+<dd>Affect the referent of each symbolic link (this is the default), rather than the symbolic link itself.</dd>
+<dt><code>--no-dereference</code>, <code>-h</code></dt>
+<dd>Affect symbolic links instead of any referenced file.</dd>
+<dt><code>--preserve-root</code></dt>
+<dd>Fail to operate recursively on '/'.</dd>
+<dt><code>--no-preserve-root</code></dt>
+<dd>Do not treat '/' specially (the default).</dd>
+<dt><code>--reference</code></dt>
+<dd>Use security context of RFILE, rather than specifying a CONTEXT value.</dd>
+<dt><code>--user</code>, <code>-u</code></dt>
+<dd>Set user USER in the target security context.</dd>
+<dt><code>--role</code>, <code>-r</code></dt>
+<dd>Set role ROLE in the target security context.</dd>
+<dt><code>--type</code>, <code>-t</code></dt>
+<dd>Set type TYPE in the target security context.</dd>
+<dt><code>--range</code>, <code>-l</code></dt>
+<dd>Set range RANGE in the target security context.</dd>
+<dt><code>--recursive</code>, <code>-R</code></dt>
+<dd>Operate on files and directories recursively.</dd>
+<dt><code>-H</code></dt>
+<dd>If a command line argument is a symbolic link to a directory, traverse it. Only valid when -R is specified.</dd>
+<dt><code>-L</code></dt>
+<dd>Traverse every symbolic link to a directory encountered. Only valid when -R is specified.</dd>
+<dt><code>-P</code></dt>
+<dd>Do not traverse any symbolic links (default). Only valid when -R is specified.</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>Output a diagnostic for every file processed.</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chgrp"><a class="header" href="#chgrp">chgrp</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-7"><a class="header" href="#summary-7">Summary</a></h2>
+Change the group of each FILE to GROUP.
+<h2 id="options-7"><a class="header" href="#options-7">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--changes</code>, <code>-c</code></dt>
+<dd>like verbose but report only when a change is made</dd>
+<dt><code>--silent</code>, <code>-f</code></dt>
+<dd></dd>
+<dt><code>--quiet</code></dt>
+<dd>suppress most error messages</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>output a diagnostic for every file processed</dd>
+<dt><code>--dereference</code></dt>
+<dd></dd>
+<dt><code>--no-dereference</code>, <code>-h</code></dt>
+<dd>affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)</dd>
+<dt><code>--preserve-root</code></dt>
+<dd>fail to operate recursively on '/'</dd>
+<dt><code>--no-preserve-root</code></dt>
+<dd>do not treat '/' specially (the default)</dd>
+<dt><code>--reference</code></dt>
+<dd>use RFILE's group rather than specifying GROUP values</dd>
+<dt><code>--recursive</code>, <code>-R</code></dt>
+<dd>operate on files and directories recursively</dd>
+<dt><code>-H</code></dt>
+<dd>if a command line argument is a symbolic link to a directory, traverse it</dd>
+<dt><code>-P</code></dt>
+<dd>do not traverse any symbolic links (default)</dd>
+<dt><code>-L</code></dt>
+<dd>traverse every symbolic link to a directory encountered</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chmod"><a class="header" href="#chmod">chmod</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-8"><a class="header" href="#summary-8">Summary</a></h2>
+Change the mode of each FILE to MODE.
+ With --reference, change the mode of each FILE to that of RFILE.
+<h2 id="options-8"><a class="header" href="#options-8">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--changes</code>, <code>-c</code></dt>
+<dd>like verbose but report only when a change is made</dd>
+<dt><code>--quiet</code>, <code>--silent</code>, <code>-f</code></dt>
+<dd>suppress most error messages</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>output a diagnostic for every file processed</dd>
+<dt><code>--no-preserve-root</code></dt>
+<dd>do not treat '/' specially (the default)</dd>
+<dt><code>--preserve-root</code></dt>
+<dd>fail to operate recursively on '/'</dd>
+<dt><code>--recursive</code>, <code>-R</code></dt>
+<dd>change files and directories recursively</dd>
+<dt><code>--reference</code></dt>
+<dd>use RFILE's mode instead of MODE values</dd>
+<dt></dt>
+<dd></dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chown"><a class="header" href="#chown">chown</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-9"><a class="header" href="#summary-9">Summary</a></h2>
+change file owner and group
+<h2 id="options-9"><a class="header" href="#options-9">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--changes</code>, <code>-c</code></dt>
+<dd>like verbose but report only when a change is made</dd>
+<dt><code>--dereference</code></dt>
+<dd>affect the referent of each symbolic link (this is the default), rather than the symbolic link itself</dd>
+<dt><code>--no-dereference</code>, <code>-h</code></dt>
+<dd>affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)</dd>
+<dt><code>--from</code></dt>
+<dd>change the owner and/or group of each file only if its current owner and/or group match those specified here. Either may be omitted, in which case a match is not required for the omitted attribute</dd>
+<dt><code>--preserve-root</code></dt>
+<dd>fail to operate recursively on '/'</dd>
+<dt><code>--no-preserve-root</code></dt>
+<dd>do not treat '/' specially (the default)</dd>
+<dt><code>--quiet</code></dt>
+<dd>suppress most error messages</dd>
+<dt><code>--recursive</code>, <code>-R</code></dt>
+<dd>operate on files and directories recursively</dd>
+<dt><code>--reference</code></dt>
+<dd>use RFILE's owner and group rather than specifying OWNER:GROUP values</dd>
+<dt><code>--silent</code>, <code>-f</code></dt>
+<dd></dd>
+<dt><code>-H</code></dt>
+<dd>if a command line argument is a symbolic link to a directory, traverse it</dd>
+<dt><code>-L</code></dt>
+<dd>traverse every symbolic link to a directory encountered</dd>
+<dt><code>-P</code></dt>
+<dd>do not traverse any symbolic links (default)</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>output a diagnostic for every file processed</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chroot"><a class="header" href="#chroot">chroot</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-10"><a class="header" href="#summary-10">Summary</a></h2>
+Run COMMAND with root directory set to NEWROOT.
+<h2 id="options-10"><a class="header" href="#options-10">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+<dt><code>--user</code>, <code>-u</code></dt>
+<dd>User (ID or name) to switch before running the program</dd>
+<dt><code>--group</code>, <code>-g</code></dt>
+<dd>Group (ID or name) to switch to</dd>
+<dt><code>--groups</code>, <code>-G</code></dt>
+<dd>Comma-separated list of groups to switch to</dd>
+<dt><code>--userspec</code></dt>
+<dd>Colon-separated user and group to switch to. Same as -u USER -g GROUP. Userspec has higher preference than -u and/or -g</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cksum"><a class="header" href="#cksum">cksum</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-11"><a class="header" href="#summary-11">Summary</a></h2>
+Print CRC and size for each file
+<h2 id="options-11"><a class="header" href="#options-11">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="comm"><a class="header" href="#comm">comm</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-12"><a class="header" href="#summary-12">Summary</a></h2>
+compare two sorted files line by line
+<h2 id="options-12"><a class="header" href="#options-12">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>-1</code></dt>
+<dd>suppress column 1 (lines unique to FILE1)</dd>
+<dt><code>-2</code></dt>
+<dd>suppress column 2 (lines unique to FILE2)</dd>
+<dt><code>-3</code></dt>
+<dd>suppress column 3 (lines that appear in both files)</dd>
+<dt><code>--output-delimiter</code></dt>
+<dd>separate columns with STR</dd>
+<dt></dt>
+<dd></dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cp"><a class="header" href="#cp">cp</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-13"><a class="header" href="#summary-13">Summary</a></h2>
+Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+<h2 id="options-13"><a class="header" href="#options-13">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--target-directory</code>, <code>-t</code></dt>
+<dd>copy all SOURCE arguments into target-directory</dd>
+<dt><code>--no-target-directory</code>, <code>-T</code></dt>
+<dd>Treat DEST as a regular file and not a directory</dd>
+<dt><code>--interactive</code>, <code>-i</code></dt>
+<dd>ask before overwriting files</dd>
+<dt><code>--link</code>, <code>-l</code></dt>
+<dd>hard-link files instead of copying</dd>
+<dt><code>--no-clobber</code>, <code>-n</code></dt>
+<dd>don't overwrite a file that already exists</dd>
+<dt><code>--recursive</code>, <code>-r</code></dt>
+<dd>copy directories recursively</dd>
+<dt><code>-R</code></dt>
+<dd>same as -r</dd>
+<dt><code>--strip-trailing-slashes</code></dt>
+<dd>remove any trailing slashes from each SOURCE argument</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>explicitly state what is being done</dd>
+<dt><code>--symbolic-link</code>, <code>-s</code></dt>
+<dd>make symbolic links instead of copying</dd>
+<dt><code>--force</code>, <code>-f</code></dt>
+<dd>if an existing destination file cannot be opened, remove it and try again (this option is ignored when the -n option is also used). Currently not implemented for Windows.</dd>
+<dt><code>--remove-destination</code></dt>
+<dd>remove each existing destination file before attempting to open it (contrast with --force). On Windows, current only works for writeable files.</dd>
+<dt><code>--backup</code></dt>
+<dd>make a backup of each existing destination file</dd>
+<dt><code>-b</code></dt>
+<dd>like --backup but does not accept an argument</dd>
+<dt><code>--suffix</code>, <code>-S</code></dt>
+<dd>override the usual backup suffix</dd>
+<dt><code>--update</code>, <code>-u</code></dt>
+<dd>copy only when the SOURCE file is newer than the destination file or when the destination file is missing</dd>
+<dt><code>--reflink</code></dt>
+<dd>control clone/CoW copies. See below</dd>
+<dt><code>--attributes-only</code></dt>
+<dd>Don't copy the file data, just the attributes</dd>
+<dt><code>--preserve</code></dt>
+<dd>Preserve the specified attributes (default: mode, ownership (unix only), timestamps), if possible additional attributes: context, links, xattr, all</dd>
+<dt><code>--preserve-default-attributes</code>, <code>-p</code></dt>
+<dd>same as --preserve=mode,ownership(unix only),timestamps</dd>
+<dt><code>--no-preserve</code></dt>
+<dd>don't preserve the specified attributes</dd>
+<dt><code>--parents</code></dt>
+<dd>use full source file name under DIRECTORY</dd>
+<dt><code>--no-dereference</code>, <code>-P</code></dt>
+<dd>never follow symbolic links in SOURCE</dd>
+<dt><code>--dereference</code>, <code>-L</code></dt>
+<dd>always follow symbolic links in SOURCE</dd>
+<dt><code>--archive</code>, <code>-a</code></dt>
+<dd>Same as -dR --preserve=all</dd>
+<dt><code>-d</code></dt>
+<dd>same as --no-dereference --preserve=links</dd>
+<dt><code>--one-file-system</code>, <code>-x</code></dt>
+<dd>stay on this file system</dd>
+<dt><code>--copy-contents</code></dt>
+<dd>NotImplemented: copy contents of special files when recursive</dd>
+<dt><code>--sparse</code></dt>
+<dd>NotImplemented: control creation of sparse files. See below</dd>
+<dt><code>--context</code></dt>
+<dd>NotImplemented: set SELinux security context of destination file to default type</dd>
+<dt><code>-H</code></dt>
+<dd>NotImplemented: follow command-line symbolic links in SOURCE</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="csplit"><a class="header" href="#csplit">csplit</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-14"><a class="header" href="#summary-14">Summary</a></h2>
+split a file into sections determined by context lines
+<h2 id="options-14"><a class="header" href="#options-14">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--suffix-format</code>, <code>-b</code></dt>
+<dd>use sprintf FORMAT instead of %02d</dd>
+<dt><code>--prefix</code>, <code>-f</code></dt>
+<dd>use PREFIX instead of 'xx'</dd>
+<dt><code>--keep-files</code>, <code>-k</code></dt>
+<dd>do not remove output files on errors</dd>
+<dt><code>--suppress-matched</code></dt>
+<dd>suppress the lines matching PATTERN</dd>
+<dt><code>--digits</code>, <code>-n</code></dt>
+<dd>use specified number of digits instead of 2</dd>
+<dt><code>--quiet</code>, <code>--silent</code>, <code>-s</code></dt>
+<dd>do not print counts of output file sizes</dd>
+<dt><code>--elide-empty-files</code>, <code>-z</code></dt>
+<dd>remove empty output files</dd>
+<dt></dt>
+<dd></dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cut"><a class="header" href="#cut">cut</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-15"><a class="header" href="#summary-15">Summary</a></h2>
+Prints specified byte or field columns from each line of stdin or the input files
+<h2 id="options-15"><a class="header" href="#options-15">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--bytes</code>, <code>-b</code></dt>
+<dd>filter byte columns from the input source</dd>
+<dt><code>--characters</code>, <code>-c</code></dt>
+<dd>alias for character mode</dd>
+<dt><code>--delimiter</code>, <code>-d</code></dt>
+<dd>specify the delimiter character that separates fields in the input source. Defaults to Tab.</dd>
+<dt><code>--fields</code>, <code>-f</code></dt>
+<dd>filter field columns from the input source</dd>
+<dt><code>--complement</code></dt>
+<dd>invert the filter - instead of displaying only the filtered columns, display all but those columns</dd>
+<dt><code>--only-delimited</code>, <code>-s</code></dt>
+<dd>in field mode, only print lines which contain the delimiter</dd>
+<dt><code>--zero-terminated</code>, <code>-z</code></dt>
+<dd>instead of filtering columns based on line, filter columns based on \0 (NULL character)</dd>
+<dt><code>--output-delimiter</code></dt>
+<dd>in field mode, replace the delimiter in output lines with this option's argument</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="date"><a class="header" href="#date">date</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-16"><a class="header" href="#summary-16">Summary</a></h2>
+print or set the system date and time
+<h2 id="options-16"><a class="header" href="#options-16">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--date</code>, <code>-d</code></dt>
+<dd>display time described by STRING, not 'now'</dd>
+<dt><code>--file</code>, <code>-f</code></dt>
+<dd>like --date; once for each line of DATEFILE</dd>
+<dt><code>--iso-8601</code>, <code>-I</code></dt>
+<dd>output date/time in ISO 8601 format.
+ FMT='date' for date only (the default),
+ 'hours', 'minutes', 'seconds', or 'ns'
+ for date and time to the indicated precision.
+ Example: 2006-08-14T02:34:56-06:00</dd>
+<dt><code>--rfc-email</code>, <code>-R</code></dt>
+<dd>output date and time in RFC 5322 format.
+ Example: Mon, 14 Aug 2006 02:34:56 -0600</dd>
+<dt><code>--rfc-3339</code></dt>
+<dd>output date/time in RFC 3339 format.
+ FMT='date', 'seconds', or 'ns'
+ for date and time to the indicated precision.
+ Example: 2006-08-14 02:34:56-06:00</dd>
+<dt><code>--debug</code></dt>
+<dd>annotate the parsed date, and warn about questionable usage to stderr</dd>
+<dt><code>--reference</code>, <code>-r</code></dt>
+<dd>display the last modification time of FILE</dd>
+<dt><code>--set</code>, <code>-s</code></dt>
+<dd>set time described by STRING</dd>
+<dt><code>--universal</code>, <code>-u</code></dt>
+<dd>print or set Coordinated Universal Time (UTC)</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dd"><a class="header" href="#dd">dd</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-17"><a class="header" href="#summary-17">Summary</a></h2>
+copy, and optionally convert, a file system resource
+<h2 id="options-17"><a class="header" href="#options-17">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--if</code></dt>
+<dd>(alternatively if=FILE) specifies the file used for input. When not specified, stdin is used instead</dd>
+<dt><code>--of</code></dt>
+<dd>(alternatively of=FILE) specifies the file used for output. When not specified, stdout is used instead</dd>
+<dt><code>--ibs</code></dt>
+<dd>(alternatively ibs=N) specifies the size of buffer used for reads (default: 512). Multiplier strings permitted.</dd>
+<dt><code>--obs</code></dt>
+<dd>(alternatively obs=N) specifies the size of buffer used for writes (default: 512). Multiplier strings permitted.</dd>
+<dt><code>--bs</code></dt>
+<dd>(alternatively bs=N) specifies ibs=N and obs=N (default: 512). If ibs or obs are also specified, bs=N takes precedence. Multiplier strings permitted.</dd>
+<dt><code>--cbs</code></dt>
+<dd>(alternatively cbs=BYTES) specifies the 'conversion block size' in bytes. Applies to the conv=block, and conv=unblock operations. Multiplier strings permitted.</dd>
+<dt><code>--skip</code></dt>
+<dd>(alternatively skip=N) causes N ibs-sized records of input to be skipped before beginning copy/convert operations. See iflag=count_bytes if skipping N bytes is preferred. Multiplier strings permitted.</dd>
+<dt><code>--seek</code></dt>
+<dd>(alternatively seek=N) seeks N obs-sized records into output before beginning copy/convert operations. See oflag=seek_bytes if seeking N bytes is preferred. Multiplier strings permitted.</dd>
+<dt><code>--count</code></dt>
+<dd>(alternatively count=N) stop reading input after N ibs-sized read operations rather than proceeding until EOF. See iflag=count_bytes if stopping after N bytes is preferred. Multiplier strings permitted.</dd>
+<dt><code>--status</code></dt>
+<dd>(alternatively status=LEVEL) controls whether volume and performance stats are written to stderr.
+<p>When unspecified, dd will print stats upon completion. An example is below.
+6+0 records in
+16+0 records out
+8192 bytes (8.2 kB, 8.0 KiB) copied, 0.00057009 s, 14.4 MB/s
+The first two lines are the 'volume' stats and the final line is the 'performance' stats.
+The volume stats indicate the number of complete and partial ibs-sized reads, or obs-sized writes that took place during the copy. The format of the volume stats is <complete>+<partial>. If records have been truncated (see conv=block), the volume stats will contain the number of truncated records.</p>
+<p>Permissible LEVEL values are:
+progress: Print periodic performance stats as the copy proceeds.
+noxfer: Print final volume stats, but not performance stats.
+none: Do not print any stats.</p>
+<p>Printing performance stats is also triggered by the INFO signal (where supported), or the USR1 signal. Setting the POSIXLY_CORRECT environment variable to any value (including an empty value) will cause the USR1 signal to be ignored.</p>
+</dd>
+<dt><code>--conv</code></dt>
+<dd>(alternatively conv=CONV[,CONV]) specifies a comma-separated list of conversion options or (for legacy reasons) file flags. Conversion options and file flags may be intermixed.
+<p>Conversion options:
+One of {ascii, ebcdic, ibm} will perform an encoding conversion.
+'ascii' converts from EBCDIC to ASCII. This is the inverse of the 'ebcdic' option.
+'ebcdic' converts from ASCII to EBCDIC. This is the inverse of the 'ascii' option.
+'ibm' converts from ASCII to EBCDIC, applying the conventions for '[', ']' and '~' specified in POSIX.</p>
+<pre><code> One of {ucase, lcase} will perform a case conversion. Works in conjunction with option {ascii, ebcdic, ibm} to infer input encoding. If no other conversion option is specified, input is assumed to be ascii.
+	 'ucase' converts from lower-case to upper-case
+	 'lcase' converts from upper-case to lower-case.
+
+ One of {block, unblock}. Convert between lines terminated by newline characters, and fixed-width lines padded by spaces (without any newlines). Both the 'block' and 'unblock' options require cbs=BYTES be specified.
+	 'block' for each newline less than the size indicated by cbs=BYTES, remove the newline and pad with spaces up to cbs. Lines longer than cbs are truncated.
+	 'unblock' for each block of input of the size indicated by cbs=BYTES, remove right-trailing spaces and replace with a newline character.
+
+ 'sparse' attempts to seek the output when an obs-sized block consists of only zeros.
+ 'swab' swaps each adjacent pair of bytes. If an odd number of bytes is present, the final byte is omitted.
+ 'sync' pad each ibs-sided block with zeros. If 'block' or 'unblock' is specified, pad with spaces instead.
+</code></pre>
+<p>Conversion Flags:
+One of {excl, nocreat}
+'excl' the output file must be created. Fail if the output file is already present.
+'nocreat' the output file will not be created. Fail if the output file in not already present.
+'notrunc' the output file will not be truncated. If this option is not present, output will be truncated when opened.
+'noerror' all read errors will be ignored. If this option is not present, dd will only ignore Error::Interrupted.
+'fdatasync' data will be written before finishing.
+'fsync' data and metadata will be written before finishing.</p>
+</dd>
+<dt><code>--iflag</code></dt>
+<dd>(alternatively iflag=FLAG[,FLAG]) a comma separated list of input flags which specify how the input source is treated. FLAG may be any of the input-flags or general-flags specified below.
+<p>Input-Flags
+'count_bytes' a value to count=N will be interpreted as bytes.
+'skip_bytes' a value to skip=N will be interpreted as bytes.
+'fullblock' wait for ibs bytes from each read. zero-length reads are still considered EOF.</p>
+<p>General-Flags
+'direct' use direct I/O for data.
+'directory' fail unless the given input (if used as an iflag) or output (if used as an oflag) is a directory.
+'dsync' use synchronized I/O for data.
+'sync' use synchronized I/O for data and metadata.
+'nonblock' use non-blocking I/O.
+'noatime' do not update access time.
+'nocache' request that OS drop cache.
+'noctty' do not assign a controlling tty.
+'nofollow' do not follow system links.</p>
+</dd>
+<dt><code>--oflag</code></dt>
+<dd>(alternatively oflag=FLAG[,FLAG]) a comma separated list of output flags which specify how the output source is treated. FLAG may be any of the output-flags or general-flags specified below.
+<p>Output-Flags
+'append' open file in append mode. Consider setting conv=notrunc as well.
+'seek_bytes' a value to seek=N will be interpreted as bytes.</p>
+<p>General-Flags
+'direct' use direct I/O for data.
+'directory' fail unless the given input (if used as an iflag) or output (if used as an oflag) is a directory.
+'dsync' use synchronized I/O for data.
+'sync' use synchronized I/O for data and metadata.
+'nonblock' use non-blocking I/O.
+'noatime' do not update access time.
+'nocache' request that OS drop cache.
+'noctty' do not assign a controlling tty.
+'nofollow' do not follow system links.</p>
+</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="df"><a class="header" href="#df">df</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-18"><a class="header" href="#summary-18">Summary</a></h2>
+Show information about the file system on which each FILE resides,
+or all file systems by default.
+<h2 id="options-18"><a class="header" href="#options-18">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--all</code>, <code>-a</code></dt>
+<dd>include dummy file systems</dd>
+<dt><code>--block-size</code>, <code>-B</code></dt>
+<dd>scale sizes by SIZE before printing them; e.g.'-BM' prints sizes in units of 1,048,576 bytes</dd>
+<dt><code>--direct</code></dt>
+<dd>show statistics for a file instead of mount point</dd>
+<dt><code>--total</code></dt>
+<dd>produce a grand total</dd>
+<dt><code>--human-readable</code>, <code>-h</code></dt>
+<dd>print sizes in human readable format (e.g., 1K 234M 2G)</dd>
+<dt><code>--si</code>, <code>-H</code></dt>
+<dd>likewise, but use powers of 1000 not 1024</dd>
+<dt><code>--inodes</code>, <code>-i</code></dt>
+<dd>list inode information instead of block usage</dd>
+<dt><code>-k</code></dt>
+<dd>like --block-size=1K</dd>
+<dt><code>--local</code>, <code>-l</code></dt>
+<dd>limit listing to local file systems</dd>
+<dt><code>--no-sync</code></dt>
+<dd>do not invoke sync before getting usage info (default)</dd>
+<dt><code>--output</code></dt>
+<dd>use the output format defined by FIELD_LIST,or print all fields if FIELD_LIST is omitted.</dd>
+<dt><code>--portability</code>, <code>-P</code></dt>
+<dd>use the POSIX output format</dd>
+<dt><code>--sync</code></dt>
+<dd>invoke sync before getting usage info</dd>
+<dt><code>--type</code>, <code>-t</code></dt>
+<dd>limit listing to file systems of type TYPE</dd>
+<dt><code>--print-type</code>, <code>-T</code></dt>
+<dd>print file system type</dd>
+<dt><code>--exclude-type</code>, <code>-x</code></dt>
+<dd>limit listing to file systems not of type TYPE</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dircolors"><a class="header" href="#dircolors">dircolors</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-19"><a class="header" href="#summary-19">Summary</a></h2>
+Output commands to set the LS_COLORS environment variable.
+<h2 id="options-19"><a class="header" href="#options-19">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--sh</code>, <code>--bourne-shell</code>, <code>-b</code></dt>
+<dd>output Bourne shell code to set LS_COLORS</dd>
+<dt><code>--csh</code>, <code>--c-shell</code>, <code>-c</code></dt>
+<dd>output C shell code to set LS_COLORS</dd>
+<dt><code>--print-database</code>, <code>-p</code></dt>
+<dd>print the byte counts</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dirname"><a class="header" href="#dirname">dirname</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-20"><a class="header" href="#summary-20">Summary</a></h2>
+strip last component from file name
+<h2 id="options-20"><a class="header" href="#options-20">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--zero</code>, <code>-z</code></dt>
+<dd>separate output with NUL rather than newline</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="du"><a class="header" href="#du">du</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-21"><a class="header" href="#summary-21">Summary</a></h2>
+estimate file space usage
+<h2 id="options-21"><a class="header" href="#options-21">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--all</code>, <code>-a</code></dt>
+<dd>write counts for all files, not just directories</dd>
+<dt><code>--apparent-size</code></dt>
+<dd>print apparent sizes,  rather  than  disk  usage although  the apparent  size is usually smaller, it may be larger due to holes in ('sparse') files, internal  fragmentation,  indirect  blocks, and the like</dd>
+<dt><code>--block-size</code>, <code>-B</code></dt>
+<dd>scale sizes  by  SIZE before printing them. E.g., '-BM' prints sizes in units of 1,048,576 bytes.  See SIZE format below.</dd>
+<dt><code>--bytes</code>, <code>-b</code></dt>
+<dd>equivalent to '--apparent-size --block-size=1'</dd>
+<dt><code>--total</code>, <code>-c</code></dt>
+<dd>produce a grand total</dd>
+<dt><code>--max-depth</code>, <code>-d</code></dt>
+<dd>print the total for a directory (or file, with --all) only if it is N or fewer levels below the command line argument;  --max-depth=0 is the same as --summarize</dd>
+<dt><code>--human-readable</code>, <code>-h</code></dt>
+<dd>print sizes in human readable format (e.g., 1K 234M 2G)</dd>
+<dt><code>--inodes</code></dt>
+<dd>list inode usage information instead of block usage like --block-size=1K</dd>
+<dt><code>-k</code></dt>
+<dd>like --block-size=1K</dd>
+<dt><code>--count-links</code>, <code>-l</code></dt>
+<dd>count sizes many times if hard linked</dd>
+<dt><code>--dereference</code>, <code>-L</code></dt>
+<dd>dereference all symbolic links</dd>
+<dt><code>-m</code></dt>
+<dd>like --block-size=1M</dd>
+<dt><code>--null</code>, <code>-0</code></dt>
+<dd>end each output line with 0 byte rather than newline</dd>
+<dt><code>--separate-dirs</code>, <code>-S</code></dt>
+<dd>do not include size of subdirectories</dd>
+<dt><code>--summarize</code>, <code>-s</code></dt>
+<dd>display only a total for each argument</dd>
+<dt><code>--si</code></dt>
+<dd>like -h, but use powers of 1000 not 1024</dd>
+<dt><code>--one-file-system</code>, <code>-x</code></dt>
+<dd>skip directories on different file systems</dd>
+<dt><code>--threshold</code>, <code>-t</code></dt>
+<dd>exclude entries smaller than SIZE if positive, or entries greater than SIZE if negative</dd>
+<dt><code>--time</code></dt>
+<dd>show time of the last modification of any file in the directory, or any of its subdirectories.  If WORD is given, show time as WORD instead of modification time: atime, access, use, ctime, status, birth or creation</dd>
+<dt><code>--time-style</code></dt>
+<dd>show times using style STYLE: full-iso, long-iso, iso, +FORMAT FORMAT is interpreted like 'date'</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="echo"><a class="header" href="#echo">echo</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-22"><a class="header" href="#summary-22">Summary</a></h2>
+display a line of text
+<h2 id="options-22"><a class="header" href="#options-22">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>-n</code></dt>
+<dd>do not output the trailing newline</dd>
+<dt><code>-e</code></dt>
+<dd>enable interpretation of backslash escapes</dd>
+<dt><code>-E</code></dt>
+<dd>disable interpretation of backslash escapes (default)</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="env"><a class="header" href="#env">env</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-23"><a class="header" href="#summary-23">Summary</a></h2>
+env ~ (uutils) set each NAME to VALUE in the environment and run COMMAND
+<h2 id="options-23"><a class="header" href="#options-23">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--ignore-environment</code>, <code>-i</code></dt>
+<dd>start with an empty environment</dd>
+<dt><code>--chdir</code>, <code>-C</code></dt>
+<dd>change working directory to DIR</dd>
+<dt><code>--null</code>, <code>-0</code></dt>
+<dd>end each output line with a 0 byte rather than a newline (only valid when printing the environment)</dd>
+<dt><code>--file</code>, <code>-f</code></dt>
+<dd>read and set variables from a ".env"-style configuration file (prior to any unset and/or set)</dd>
+<dt><code>--unset</code>, <code>-u</code></dt>
+<dd>remove variable from the environment</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="expand"><a class="header" href="#expand">expand</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-24"><a class="header" href="#summary-24">Summary</a></h2>
+Convert tabs in each FILE to spaces, writing to standard output.
+ With no FILE, or when FILE is -, read standard input.
+<h2 id="options-24"><a class="header" href="#options-24">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--initial</code>, <code>-i</code></dt>
+<dd>do not convert tabs after non blanks</dd>
+<dt><code>--tabs</code>, <code>-t</code></dt>
+<dd>have tabs N characters apart, not 8 or use comma separated list of explicit tab positions</dd>
+<dt><code>--no-utf8</code>, <code>-U</code></dt>
+<dd>interpret input file as 8-bit ASCII rather than UTF-8</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="expr"><a class="header" href="#expr">expr</a></h1>
+<div class="version">version: 
+</div>
+<h2 id="options-25"><a class="header" href="#options-25">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--version</code></dt>
+<dd></dd>
+<dt><code>--help</code></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="factor"><a class="header" href="#factor">factor</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-25"><a class="header" href="#summary-25">Summary</a></h2>
+Print the prime factors of the given NUMBER(s).
+If none are specified, read from standard input.
+<h2 id="options-26"><a class="header" href="#options-26">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="false"><a class="header" href="#false">false</a></h1>
+<div class="version">version: 
+</div>
+<h2 id="options-27"><a class="header" href="#options-27">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fmt"><a class="header" href="#fmt">fmt</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-26"><a class="header" href="#summary-26">Summary</a></h2>
+Reformat paragraphs from input files (or stdin) to stdout.
+<h2 id="options-28"><a class="header" href="#options-28">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--crown-margin</code>, <code>-c</code></dt>
+<dd>First and second line of paragraph may have different indentations, in which case the first line's indentation is preserved, and each subsequent line's indentation matches the second line.</dd>
+<dt><code>--tagged-paragraph</code>, <code>-t</code></dt>
+<dd>Like -c, except that the first and second line of a paragraph *must* have different indentation or they are treated as separate paragraphs.</dd>
+<dt><code>--preserve-headers</code>, <code>-m</code></dt>
+<dd>Attempt to detect and preserve mail headers in the input. Be careful when combining this flag with -p.</dd>
+<dt><code>--split-only</code>, <code>-s</code></dt>
+<dd>Split lines only, do not reflow.</dd>
+<dt><code>--uniform-spacing</code>, <code>-u</code></dt>
+<dd>Insert exactly one space between words, and two between sentences. Sentence breaks in the input are detected as [?!.] followed by two spaces or a newline; other punctuation is not interpreted as a sentence break.</dd>
+<dt><code>--prefix</code>, <code>-p</code></dt>
+<dd>Reformat only lines beginning with PREFIX, reattaching PREFIX to reformatted lines. Unless -x is specified, leading whitespace will be ignored when matching PREFIX.</dd>
+<dt><code>--skip-prefix</code>, <code>-P</code></dt>
+<dd>Do not reformat lines beginning with PSKIP. Unless -X is specified, leading whitespace will be ignored when matching PSKIP</dd>
+<dt><code>--exact-prefix</code>, <code>-x</code></dt>
+<dd>PREFIX must match at the beginning of the line with no preceding whitespace.</dd>
+<dt><code>--exact-skip-prefix</code>, <code>-X</code></dt>
+<dd>PSKIP must match at the beginning of the line with no preceding whitespace.</dd>
+<dt><code>--width</code>, <code>-w</code></dt>
+<dd>Fill output lines up to a maximum of WIDTH columns, default 79.</dd>
+<dt><code>--goal</code>, <code>-g</code></dt>
+<dd>Goal width, default ~0.94*WIDTH. Must be less than WIDTH.</dd>
+<dt><code>--quick</code>, <code>-q</code></dt>
+<dd>Break lines more quickly at the expense of a potentially more ragged appearance.</dd>
+<dt><code>--tab-width</code>, <code>-T</code></dt>
+<dd>Treat tabs as TABWIDTH spaces for determining line length, default 8. Note that this is used only for calculating line lengths; tabs are preserved in the output.</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fold"><a class="header" href="#fold">fold</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-27"><a class="header" href="#summary-27">Summary</a></h2>
+Writes each file (or standard input if no files are given)
+ to standard output whilst breaking long lines
+<h2 id="options-29"><a class="header" href="#options-29">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--bytes</code>, <code>-b</code></dt>
+<dd>count using bytes rather than columns (meaning control characters such as newline are not treated specially)</dd>
+<dt><code>--spaces</code>, <code>-s</code></dt>
+<dd>break lines at word boundaries rather than a hard cut-off</dd>
+<dt><code>--width</code>, <code>-w</code></dt>
+<dd>set WIDTH as the maximum line width rather than 80</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="groups"><a class="header" href="#groups">groups</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-28"><a class="header" href="#summary-28">Summary</a></h2>
+Print group memberships for each USERNAME or, if no USERNAME is specified, for
+the current process (which may differ if the groups data‐base has changed).
+<h2 id="options-30"><a class="header" href="#options-30">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hashsum"><a class="header" href="#hashsum">hashsum</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-29"><a class="header" href="#summary-29">Summary</a></h2>
+Compute and check message digests.
+<h2 id="options-31"><a class="header" href="#options-31">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--binary</code>, <code>-b</code></dt>
+<dd>read in binary mode</dd>
+<dt><code>--check</code>, <code>-c</code></dt>
+<dd>read hashsums from the FILEs and check them</dd>
+<dt><code>--tag</code></dt>
+<dd>create a BSD-style checksum</dd>
+<dt><code>--text</code>, <code>-t</code></dt>
+<dd>read in text mode (default)</dd>
+<dt><code>--quiet</code>, <code>-q</code></dt>
+<dd>don't print OK for each successfully verified file</dd>
+<dt><code>--status</code>, <code>-s</code></dt>
+<dd>don't output anything, status code shows success</dd>
+<dt><code>--strict</code></dt>
+<dd>exit non-zero for improperly formatted checksum lines</dd>
+<dt><code>--warn</code>, <code>-w</code></dt>
+<dd>warn about improperly formatted checksum lines</dd>
+<dt><code>--bits</code></dt>
+<dd>set the size of the output (only for SHAKE)</dd>
+<dt></dt>
+<dd></dd>
+<dt><code>--md5</code></dt>
+<dd>work with MD5</dd>
+<dt><code>--sha1</code></dt>
+<dd>work with SHA1</dd>
+<dt><code>--sha224</code></dt>
+<dd>work with SHA224</dd>
+<dt><code>--sha256</code></dt>
+<dd>work with SHA256</dd>
+<dt><code>--sha384</code></dt>
+<dd>work with SHA384</dd>
+<dt><code>--sha512</code></dt>
+<dd>work with SHA512</dd>
+<dt><code>--sha3</code></dt>
+<dd>work with SHA3</dd>
+<dt><code>--sha3-224</code></dt>
+<dd>work with SHA3-224</dd>
+<dt><code>--sha3-256</code></dt>
+<dd>work with SHA3-256</dd>
+<dt><code>--sha3-384</code></dt>
+<dd>work with SHA3-384</dd>
+<dt><code>--sha3-512</code></dt>
+<dd>work with SHA3-512</dd>
+<dt><code>--shake128</code></dt>
+<dd>work with SHAKE128 using BITS for the output size</dd>
+<dt><code>--shake256</code></dt>
+<dd>work with SHAKE256 using BITS for the output size</dd>
+<dt><code>--b2sum</code></dt>
+<dd>work with BLAKE2</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="head"><a class="header" href="#head">head</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-30"><a class="header" href="#summary-30">Summary</a></h2>
+Print the first 10 lines of each FILE to standard output.
+With more than one FILE, precede each with a header giving the file name.
+With no FILE, or when FILE is -, read standard input.
+<p>Mandatory arguments to long flags are mandatory for short flags too.</p>
+<h2 id="options-32"><a class="header" href="#options-32">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--bytes</code>, <code>-c</code></dt>
+<dd>print the first NUM bytes of each file;
+with the leading '-', print all but the last
+NUM bytes of each file</dd>
+<dt><code>--lines</code>, <code>-n</code></dt>
+<dd>print the first NUM lines instead of the first 10;
+with the leading '-', print all but the last
+NUM lines of each file</dd>
+<dt><code>--quiet</code>, <code>--silent</code>, <code>-q</code></dt>
+<dd>never print headers giving file names</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>always print headers giving file names</dd>
+<dt><code>--zero-terminated</code>, <code>-z</code></dt>
+<dd>line delimiter is NUL, not newline</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hostid"><a class="header" href="#hostid">hostid</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="options-33"><a class="header" href="#options-33">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hostname"><a class="header" href="#hostname">hostname</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-31"><a class="header" href="#summary-31">Summary</a></h2>
+Display or set the system's host name.
+<h2 id="options-34"><a class="header" href="#options-34">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--domain</code>, <code>-d</code></dt>
+<dd>Display the name of the DNS domain if possible</dd>
+<dt><code>--ip-address</code>, <code>-i</code></dt>
+<dd>Display the network address(es) of the host</dd>
+<dt><code>--fqdn</code>, <code>-f</code></dt>
+<dd>Display the FQDN (Fully Qualified Domain Name) (default)</dd>
+<dt><code>--short</code>, <code>-s</code></dt>
+<dd>Display the short hostname (the portion before the first dot) if possible</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="id"><a class="header" href="#id">id</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-32"><a class="header" href="#summary-32">Summary</a></h2>
+Print user and group information for each specified USER,
+or (when USER omitted) for the current user.
+<h2 id="options-35"><a class="header" href="#options-35">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>-A</code></dt>
+<dd>Display the process audit user ID and other process audit properties,
+which requires privilege (not available on Linux).</dd>
+<dt><code>--user</code>, <code>-u</code></dt>
+<dd>Display only the effective user ID as a number.</dd>
+<dt><code>--group</code>, <code>-g</code></dt>
+<dd>Display only the effective group ID as a number</dd>
+<dt><code>--groups</code>, <code>-G</code></dt>
+<dd>Display only the different group IDs as white-space separated numbers, in no particular order.</dd>
+<dt><code>-p</code></dt>
+<dd>Make the output human-readable. Each display is on a separate line.</dd>
+<dt><code>--name</code>, <code>-n</code></dt>
+<dd>Display the name of the user or group ID for the -G, -g and -u options instead of the number.
+If any of the ID numbers cannot be mapped into names, the number will be displayed as usual.</dd>
+<dt><code>-P</code></dt>
+<dd>Display the id as a password file entry.</dd>
+<dt><code>--real</code>, <code>-r</code></dt>
+<dd>Display the real ID for the -G, -g and -u options instead of the effective ID.</dd>
+<dt><code>--zero</code>, <code>-z</code></dt>
+<dd>delimit entries with NUL characters, not whitespace;
+not permitted in default format</dd>
+<dt><code>--context</code>, <code>-Z</code></dt>
+<dd>print only the security context of the process</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="install"><a class="header" href="#install">install</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-33"><a class="header" href="#summary-33">Summary</a></h2>
+Copy SOURCE to DEST or multiple SOURCE(s) to the existing
+ DIRECTORY, while setting permission modes and owner/group
+<h2 id="options-36"><a class="header" href="#options-36">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--backup</code></dt>
+<dd>make a backup of each existing destination file</dd>
+<dt><code>-b</code></dt>
+<dd>like --backup but does not accept an argument</dd>
+<dt><code>-c</code></dt>
+<dd>ignored</dd>
+<dt><code>--compare</code>, <code>-C</code></dt>
+<dd>compare each pair of source and destination files, and in some cases, do not modify the destination at all</dd>
+<dt><code>--directory</code>, <code>-d</code></dt>
+<dd>treat all arguments as directory names. create all components of the specified directories</dd>
+<dt><code>-D</code></dt>
+<dd>create all leading components of DEST except the last, then copy SOURCE to DEST</dd>
+<dt><code>--group</code>, <code>-g</code></dt>
+<dd>set group ownership, instead of process's current group</dd>
+<dt><code>--mode</code>, <code>-m</code></dt>
+<dd>set permission mode (as in chmod), instead of rwxr-xr-x</dd>
+<dt><code>--owner</code>, <code>-o</code></dt>
+<dd>set ownership (super-user only)</dd>
+<dt><code>--preserve-timestamps</code>, <code>-p</code></dt>
+<dd>apply access/modification times of SOURCE files to corresponding destination files</dd>
+<dt><code>--strip</code>, <code>-s</code></dt>
+<dd>strip symbol tables (no action Windows)</dd>
+<dt><code>--strip-program</code></dt>
+<dd>program used to strip binaries (no action Windows)</dd>
+<dt><code>--suffix</code>, <code>-S</code></dt>
+<dd>override the usual backup suffix</dd>
+<dt><code>--target-directory</code>, <code>-t</code></dt>
+<dd>move all SOURCE arguments into DIRECTORY</dd>
+<dt><code>--no-target-directory</code>, <code>-T</code></dt>
+<dd>(unimplemented) treat DEST as a normal file</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>explain what is being done</dd>
+<dt><code>--preserve-context</code>, <code>-P</code></dt>
+<dd>(unimplemented) preserve security context</dd>
+<dt><code>--context</code>, <code>-Z</code></dt>
+<dd>(unimplemented) set security context of files and directories</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="join"><a class="header" href="#join">join</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-34"><a class="header" href="#summary-34">Summary</a></h2>
+For each pair of input lines with identical join fields, write a line to
+standard output. The default join field is the first, delimited by blanks.
+<p>When FILE1 or FILE2 (not both) is -, read standard input.</p>
+<h2 id="options-37"><a class="header" href="#options-37">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>-a</code></dt>
+<dd>also print unpairable lines from file FILENUM, where
+FILENUM is 1 or 2, corresponding to FILE1 or FILE2</dd>
+<dt><code>-v</code></dt>
+<dd>like -a FILENUM, but suppress joined output lines</dd>
+<dt><code>-e</code></dt>
+<dd>replace missing input fields with EMPTY</dd>
+<dt><code>--ignore-case</code>, <code>-i</code></dt>
+<dd>ignore differences in case when comparing fields</dd>
+<dt><code>-j</code></dt>
+<dd>equivalent to '-1 FIELD -2 FIELD'</dd>
+<dt><code>-o</code></dt>
+<dd>obey FORMAT while constructing output line</dd>
+<dt><code>-t</code></dt>
+<dd>use CHAR as input and output field separator</dd>
+<dt><code>-1</code></dt>
+<dd>join on this FIELD of file 1</dd>
+<dt><code>-2</code></dt>
+<dd>join on this FIELD of file 2</dd>
+<dt><code>--check-order</code></dt>
+<dd>check that the input is correctly sorted, even if all input lines are pairable</dd>
+<dt><code>--nocheck-order</code></dt>
+<dd>do not check that the input is correctly sorted</dd>
+<dt><code>--header</code></dt>
+<dd>treat the first line in each file as field headers, print them without trying to pair them</dd>
+<dt><code>--zero-terminated</code>, <code>-z</code></dt>
+<dd>line delimiter is NUL, not newline</dd>
+<dt></dt>
+<dd></dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="kill"><a class="header" href="#kill">kill</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-35"><a class="header" href="#summary-35">Summary</a></h2>
+Send signal to processes or list information about signals.
+<h2 id="options-38"><a class="header" href="#options-38">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--list</code>, <code>-l</code></dt>
+<dd>Lists signals</dd>
+<dt><code>--table</code>, <code>-t</code></dt>
+<dd>Lists table of signals</dd>
+<dt><code>-L</code></dt>
+<dd></dd>
+<dt><code>--signal</code>, <code>-s</code></dt>
+<dd>Sends given signal</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="link"><a class="header" href="#link">link</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-36"><a class="header" href="#summary-36">Summary</a></h2>
+Call the link function to create a link named FILE2 to an existing FILE1.
+<h2 id="options-39"><a class="header" href="#options-39">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ln"><a class="header" href="#ln">ln</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-37"><a class="header" href="#summary-37">Summary</a></h2>
+change file owner and group
+<h2 id="options-40"><a class="header" href="#options-40">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--backup</code></dt>
+<dd>make a backup of each existing destination file</dd>
+<dt><code>-b</code></dt>
+<dd>like --backup but does not accept an argument</dd>
+<dt><code>--force</code>, <code>-f</code></dt>
+<dd>remove existing destination files</dd>
+<dt><code>--interactive</code>, <code>-i</code></dt>
+<dd>prompt whether to remove existing destination files</dd>
+<dt><code>--no-dereference</code>, <code>-n</code></dt>
+<dd>treat LINK_NAME as a normal file if it is a symbolic link to a directory</dd>
+<dt><code>--symbolic</code>, <code>-s</code></dt>
+<dd>make symbolic links instead of hard links</dd>
+<dt><code>--suffix</code>, <code>-S</code></dt>
+<dd>override the usual backup suffix</dd>
+<dt><code>--target-directory</code>, <code>-t</code></dt>
+<dd>specify the DIRECTORY in which to create the links</dd>
+<dt><code>--no-target-directory</code>, <code>-T</code></dt>
+<dd>treat LINK_NAME as a normal file always</dd>
+<dt><code>--relative</code>, <code>-r</code></dt>
+<dd>create symbolic links relative to link location</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>print name of each linked file</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="logname"><a class="header" href="#logname">logname</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-38"><a class="header" href="#summary-38">Summary</a></h2>
+Print user's login name
+<h2 id="options-41"><a class="header" href="#options-41">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ls"><a class="header" href="#ls">ls</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-39"><a class="header" href="#summary-39">Summary</a></h2>
+By default, ls will list the files and contents of any directories on the command line, expect that it will ignore files and directories whose names start with '.'.
+<h2 id="options-42"><a class="header" href="#options-42">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--format</code></dt>
+<dd>Set the display format.</dd>
+<dt><code>-C</code></dt>
+<dd>Display the files in columns.</dd>
+<dt><code>--long</code>, <code>-l</code></dt>
+<dd>Display detailed information.</dd>
+<dt><code>-x</code></dt>
+<dd>List entries in rows instead of in columns.</dd>
+<dt><code>-m</code></dt>
+<dd>List entries separated by commas.</dd>
+<dt><code>-1</code></dt>
+<dd>List one file per line.</dd>
+<dt><code>-o</code></dt>
+<dd>Long format without group information. Identical to --format=long with --no-group.</dd>
+<dt><code>-g</code></dt>
+<dd>Long format without owner information.</dd>
+<dt><code>--numeric-uid-gid</code>, <code>-n</code></dt>
+<dd>-l with numeric UIDs and GIDs.</dd>
+<dt><code>--quoting-style</code></dt>
+<dd>Set quoting style.</dd>
+<dt><code>--literal</code>, <code>-N</code></dt>
+<dd>Use literal quoting style. Equivalent to `--quoting-style=literal`</dd>
+<dt><code>--escape</code>, <code>-b</code></dt>
+<dd>Use escape quoting style. Equivalent to `--quoting-style=escape`</dd>
+<dt><code>--quote-name</code>, <code>-Q</code></dt>
+<dd>Use C quoting style. Equivalent to `--quoting-style=c`</dd>
+<dt><code>--hide-control-chars</code>, <code>-q</code></dt>
+<dd>Replace control characters with '?' if they are not escaped.</dd>
+<dt><code>--show-control-chars</code></dt>
+<dd>Show control characters 'as is' if they are not escaped.</dd>
+<dt><code>--time</code></dt>
+<dd>Show time in <field>:
+	access time (-u): atime, access, use;
+	change time (-t): ctime, status.
+	birth time: birth, creation;</dd>
+<dt><code>-c</code></dt>
+<dd>If the long listing format (e.g., -l, -o) is being used, print the status change time (the 'ctime' in the inode) instead of the modification time. When explicitly sorting by time (--sort=time or -t) or when not using a long listing format, sort according to the status change time.</dd>
+<dt><code>-u</code></dt>
+<dd>If the long listing format (e.g., -l, -o) is being used, print the status access time instead of the modification time. When explicitly sorting by time (--sort=time or -t) or when not using a long listing format, sort according to the access time.</dd>
+<dt><code>--hide</code></dt>
+<dd>do not list implied entries matching shell PATTERN (overridden by -a or -A)</dd>
+<dt><code>--ignore</code>, <code>-I</code></dt>
+<dd>do not list implied entries matching shell PATTERN</dd>
+<dt><code>--ignore-backups</code>, <code>-B</code></dt>
+<dd>Ignore entries which end with ~.</dd>
+<dt><code>--sort</code></dt>
+<dd>Sort by <field>: name, none (-U), time (-t), size (-S) or extension (-X)</dd>
+<dt><code>-S</code></dt>
+<dd>Sort by file size, largest first.</dd>
+<dt><code>-t</code></dt>
+<dd>Sort by modification time (the 'mtime' in the inode), newest first.</dd>
+<dt><code>-v</code></dt>
+<dd>Natural sort of (version) numbers in the filenames.</dd>
+<dt><code>-X</code></dt>
+<dd>Sort alphabetically by entry extension.</dd>
+<dt><code>-U</code></dt>
+<dd>Do not sort; list the files in whatever order they are stored in the directory.  This is especially useful when listing very large directories, since not doing any sorting can be noticeably faster.</dd>
+<dt><code>--dereference</code>, <code>-L</code></dt>
+<dd>When showing file information for a symbolic link, show information for the file the link references rather than the link itself.</dd>
+<dt><code>--dereference-command-line-symlink-to-dir</code></dt>
+<dd>Do not dereference symlinks except when they link to directories and are given as command line arguments.</dd>
+<dt><code>--dereference-command-line</code>, <code>-H</code></dt>
+<dd>Do not dereference symlinks except when given as command line arguments.</dd>
+<dt><code>--no-group</code>, <code>-G</code></dt>
+<dd>Do not show group in long format.</dd>
+<dt><code>--author</code></dt>
+<dd>Show author in long format. On the supported platforms, the author always matches the file owner.</dd>
+<dt><code>--all</code>, <code>-a</code></dt>
+<dd>Do not ignore hidden files (files with names that start with '.').</dd>
+<dt><code>--almost-all</code>, <code>-A</code></dt>
+<dd>In a directory, do not ignore all file names that start with '.', only ignore '.' and '..'.</dd>
+<dt><code>--directory</code>, <code>-d</code></dt>
+<dd>Only list the names of directories, rather than listing directory contents. This will not follow symbolic links unless one of `--dereference-command-line (-H)`, `--dereference (-L)`, or `--dereference-command-line-symlink-to-dir` is specified.</dd>
+<dt><code>--human-readable</code>, <code>-h</code></dt>
+<dd>Print human readable file sizes (e.g. 1K 234M 56G).</dd>
+<dt><code>--si</code></dt>
+<dd>Print human readable file sizes using powers of 1000 instead of 1024.</dd>
+<dt><code>--inode</code>, <code>-i</code></dt>
+<dd>print the index number of each file</dd>
+<dt><code>--reverse</code>, <code>-r</code></dt>
+<dd>Reverse whatever the sorting method is e.g., list files in reverse alphabetical order, youngest first, smallest first, or whatever.</dd>
+<dt><code>--recursive</code>, <code>-R</code></dt>
+<dd>List the contents of all directories recursively.</dd>
+<dt><code>--width</code>, <code>-w</code></dt>
+<dd>Assume that the terminal is COLS columns wide.</dd>
+<dt><code>--color</code></dt>
+<dd>Color output based on file type.</dd>
+<dt><code>--indicator-style</code></dt>
+<dd>Append indicator with style WORD to entry names: none (default),  slash (-p), file-type (--file-type), classify (-F)</dd>
+<dt><code>--classify</code>, <code>-F</code></dt>
+<dd>Append a character to each file name indicating the file type. Also, for regular files that are executable, append '*'. The file type indicators are '/' for directories, '@' for symbolic links, '|' for FIFOs, '=' for sockets, '>' for doors, and nothing for regular files.</dd>
+<dt><code>--file-type</code></dt>
+<dd>Same as --classify, but do not append '*'</dd>
+<dt><code>-p</code></dt>
+<dd>Append / indicator to directories.</dd>
+<dt><code>--time-style</code></dt>
+<dd>time/date format with -l; see TIME_STYLE below</dd>
+<dt><code>--full-time</code></dt>
+<dd>like -l --time-style=full-iso</dd>
+<dt><code>--context</code>, <code>-Z</code></dt>
+<dd>print any security context of each file</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mkdir"><a class="header" href="#mkdir">mkdir</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-40"><a class="header" href="#summary-40">Summary</a></h2>
+Create the given DIRECTORY(ies) if they do not exist
+<h2 id="options-43"><a class="header" href="#options-43">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--mode</code>, <code>-m</code></dt>
+<dd>set file mode (not implemented on windows)</dd>
+<dt><code>--parents</code>, <code>-p</code></dt>
+<dd>make parent directories as needed</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>print a message for each printed directory</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mkfifo"><a class="header" href="#mkfifo">mkfifo</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-41"><a class="header" href="#summary-41">Summary</a></h2>
+Create a FIFO with the given name.
+<h2 id="options-44"><a class="header" href="#options-44">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--mode</code>, <code>-m</code></dt>
+<dd>file permissions for the fifo</dd>
+<dt><code>-Z</code></dt>
+<dd>set the SELinux security context to default type</dd>
+<dt><code>--context</code></dt>
+<dd>like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mknod"><a class="header" href="#mknod">mknod</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-42"><a class="header" href="#summary-42">Summary</a></h2>
+Create the special file NAME of the given TYPE.
+<h2 id="options-45"><a class="header" href="#options-45">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--mode</code>, <code>-m</code></dt>
+<dd>set file permission bits to MODE, not a=rw - umask</dd>
+<dt></dt>
+<dd>name of the new file</dd>
+<dt></dt>
+<dd>type of the new file (b, c, u or p)</dd>
+<dt></dt>
+<dd>major file type</dd>
+<dt></dt>
+<dd>minor file type</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mktemp"><a class="header" href="#mktemp">mktemp</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-43"><a class="header" href="#summary-43">Summary</a></h2>
+create a temporary file or directory.
+<h2 id="options-46"><a class="header" href="#options-46">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--directory</code>, <code>-d</code></dt>
+<dd>Make a directory instead of a file</dd>
+<dt><code>--dry-run</code>, <code>-u</code></dt>
+<dd>do not create anything; merely print a name (unsafe)</dd>
+<dt><code>--quiet</code>, <code>-q</code></dt>
+<dd>Fail silently if an error occurs.</dd>
+<dt><code>--suffix</code></dt>
+<dd>append SUFFIX to TEMPLATE; SUFFIX must not contain a path separator. This option is implied if TEMPLATE does not end with X.</dd>
+<dt><code>--tmpdir</code>, <code>-p</code></dt>
+<dd>interpret TEMPLATE relative to DIR; if DIR is not specified, use $TMPDIR ($TMP on windows) if set, else /tmp. With this option, TEMPLATE must not be an absolute name; unlike with -t, TEMPLATE may contain slashes, but mktemp creates only the final component</dd>
+<dt><code>-t</code></dt>
+<dd>Generate a template (using the supplied prefix and TMPDIR (TMP on windows) if set) to create a filename template [deprecated]</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="more"><a class="header" href="#more">more</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-44"><a class="header" href="#summary-44">Summary</a></h2>
+A file perusal filter for CRT viewing.
+<h2 id="options-47"><a class="header" href="#options-47">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--silent</code>, <code>-d</code></dt>
+<dd>Display help instead of ringing bell</dd>
+<dt></dt>
+<dd>Path to the files to be read</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mv"><a class="header" href="#mv">mv</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-45"><a class="header" href="#summary-45">Summary</a></h2>
+Move SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+<h2 id="options-48"><a class="header" href="#options-48">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--backup</code></dt>
+<dd>make a backup of each existing destination file</dd>
+<dt><code>-b</code></dt>
+<dd>like --backup but does not accept an argument</dd>
+<dt><code>--force</code>, <code>-f</code></dt>
+<dd>do not prompt before overwriting</dd>
+<dt><code>--interactive</code>, <code>-i</code></dt>
+<dd>prompt before override</dd>
+<dt><code>--no-clobber</code>, <code>-n</code></dt>
+<dd>do not overwrite an existing file</dd>
+<dt><code>--strip-trailing-slashes</code></dt>
+<dd>remove any trailing slashes from each SOURCE argument</dd>
+<dt><code>--suffix</code>, <code>-S</code></dt>
+<dd>override the usual backup suffix</dd>
+<dt><code>--target-directory</code>, <code>-t</code></dt>
+<dd>move all SOURCE arguments into DIRECTORY</dd>
+<dt><code>--no-target-directory</code>, <code>-T</code></dt>
+<dd>treat DEST as a normal file</dd>
+<dt><code>--update</code>, <code>-u</code></dt>
+<dd>move only when the SOURCE file is newer than the destination file or when the destination file is missing</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>explain what is being done</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nice"><a class="header" href="#nice">nice</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="options-49"><a class="header" href="#options-49">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--adjustment</code>, <code>-n</code></dt>
+<dd>add N to the niceness (default is 10)</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nl"><a class="header" href="#nl">nl</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="options-50"><a class="header" href="#options-50">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+<dt><code>--body-numbering</code>, <code>-b</code></dt>
+<dd>use STYLE for numbering body lines</dd>
+<dt><code>--section-delimiter</code>, <code>-d</code></dt>
+<dd>use CC for separating logical pages</dd>
+<dt><code>--footer-numbering</code>, <code>-f</code></dt>
+<dd>use STYLE for numbering footer lines</dd>
+<dt><code>--header-numbering</code>, <code>-h</code></dt>
+<dd>use STYLE for numbering header lines</dd>
+<dt><code>--line-increment</code>, <code>-i</code></dt>
+<dd>line number increment at each line</dd>
+<dt><code>--join-blank-lines</code>, <code>-l</code></dt>
+<dd>group of NUMBER empty lines counted as one</dd>
+<dt><code>--number-format</code>, <code>-n</code></dt>
+<dd>insert line numbers according to FORMAT</dd>
+<dt><code>--no-renumber</code>, <code>-p</code></dt>
+<dd>do not reset line numbers at logical pages</dd>
+<dt><code>--number-separator</code>, <code>-s</code></dt>
+<dd>add STRING after (possible) line number</dd>
+<dt><code>--starting-line-number</code>, <code>-v</code></dt>
+<dd>first line number on each logical page</dd>
+<dt><code>--number-width</code>, <code>-w</code></dt>
+<dd>use NUMBER columns for line numbers</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nohup"><a class="header" href="#nohup">nohup</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-46"><a class="header" href="#summary-46">Summary</a></h2>
+Run COMMAND ignoring hangup signals.
+<h2 id="options-51"><a class="header" href="#options-51">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nproc"><a class="header" href="#nproc">nproc</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-47"><a class="header" href="#summary-47">Summary</a></h2>
+Print the number of cores available to the current process.
+<h2 id="options-52"><a class="header" href="#options-52">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--all</code></dt>
+<dd>print the number of cores available to the system</dd>
+<dt><code>--ignore</code></dt>
+<dd>ignore up to N cores</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="numfmt"><a class="header" href="#numfmt">numfmt</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-48"><a class="header" href="#summary-48">Summary</a></h2>
+Convert numbers from/to human-readable strings
+<h2 id="options-53"><a class="header" href="#options-53">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--delimiter</code>, <code>-d</code></dt>
+<dd>use X instead of whitespace for field delimiter</dd>
+<dt><code>--field</code></dt>
+<dd>replace the numbers in these input fields (default=1) see FIELDS below</dd>
+<dt><code>--from</code></dt>
+<dd>auto-scale input numbers to UNITs; see UNIT below</dd>
+<dt><code>--to</code></dt>
+<dd>auto-scale output numbers to UNITs; see UNIT below</dd>
+<dt><code>--padding</code></dt>
+<dd>pad the output to N characters; positive N will right-align; negative N will left-align; padding is ignored if the output is wider than N; the default is to automatically pad if a whitespace is found</dd>
+<dt><code>--header</code></dt>
+<dd>print (without converting) the first N header lines; N defaults to 1 if not specified</dd>
+<dt><code>--round</code></dt>
+<dd>use METHOD for rounding when scaling; METHOD can be: up,down, from-zero (default), towards-zero, nearest</dd>
+<dt><code>--suffix</code></dt>
+<dd>print SUFFIX after each formatted number, and accept inputs optionally ending with SUFFIX</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="od"><a class="header" href="#od">od</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-49"><a class="header" href="#summary-49">Summary</a></h2>
+dump files in octal and other formats
+<h2 id="options-54"><a class="header" href="#options-54">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--address-radix</code>, <code>-A</code></dt>
+<dd>Select the base in which file offsets are printed.</dd>
+<dt><code>--skip-bytes</code>, <code>-j</code></dt>
+<dd>Skip bytes input bytes before formatting and writing.</dd>
+<dt><code>--read-bytes</code>, <code>-N</code></dt>
+<dd>limit dump to BYTES input bytes</dd>
+<dt><code>--endian</code></dt>
+<dd>byte order to use for multi-byte formats</dd>
+<dt><code>--strings</code>, <code>-S</code></dt>
+<dd>NotImplemented: output strings of at least BYTES graphic chars. 3 is assumed when BYTES is not specified.</dd>
+<dt><code>-a</code></dt>
+<dd>named characters, ignoring high-order bit</dd>
+<dt><code>-b</code></dt>
+<dd>octal bytes</dd>
+<dt><code>-c</code></dt>
+<dd>ASCII characters or backslash escapes</dd>
+<dt><code>-d</code></dt>
+<dd>unsigned decimal 2-byte units</dd>
+<dt><code>-D</code></dt>
+<dd>unsigned decimal 4-byte units</dd>
+<dt><code>-o</code></dt>
+<dd>octal 2-byte units</dd>
+<dt><code>-I</code></dt>
+<dd>decimal 8-byte units</dd>
+<dt><code>-L</code></dt>
+<dd>decimal 8-byte units</dd>
+<dt><code>-i</code></dt>
+<dd>decimal 4-byte units</dd>
+<dt><code>-l</code></dt>
+<dd>decimal 8-byte units</dd>
+<dt><code>-x</code></dt>
+<dd>hexadecimal 2-byte units</dd>
+<dt><code>-h</code></dt>
+<dd>hexadecimal 2-byte units</dd>
+<dt><code>-O</code></dt>
+<dd>octal 4-byte units</dd>
+<dt><code>-s</code></dt>
+<dd>decimal 2-byte units</dd>
+<dt><code>-X</code></dt>
+<dd>hexadecimal 4-byte units</dd>
+<dt><code>-H</code></dt>
+<dd>hexadecimal 4-byte units</dd>
+<dt><code>-e</code></dt>
+<dd>floating point double precision (64-bit) units</dd>
+<dt><code>-f</code></dt>
+<dd>floating point double precision (32-bit) units</dd>
+<dt><code>-F</code></dt>
+<dd>floating point double precision (64-bit) units</dd>
+<dt><code>--format</code>, <code>-t</code></dt>
+<dd>select output format or formats</dd>
+<dt><code>--output-duplicates</code>, <code>-v</code></dt>
+<dd>do not use * to mark line suppression</dd>
+<dt><code>--width</code>, <code>-w</code></dt>
+<dd>output BYTES bytes per output line. 32 is implied when BYTES is not specified.</dd>
+<dt><code>--traditional</code></dt>
+<dd>compatibility mode with one input, offset and label.</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="paste"><a class="header" href="#paste">paste</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-50"><a class="header" href="#summary-50">Summary</a></h2>
+Write lines consisting of the sequentially corresponding lines from each
+FILE, separated by TABs, to standard output.
+<h2 id="options-55"><a class="header" href="#options-55">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--serial</code>, <code>-s</code></dt>
+<dd>paste one file at a time instead of in parallel</dd>
+<dt><code>--delimiters</code>, <code>-d</code></dt>
+<dd>reuse characters from LIST instead of TABs</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pathchk"><a class="header" href="#pathchk">pathchk</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-51"><a class="header" href="#summary-51">Summary</a></h2>
+Check whether file names are valid or portable
+<h2 id="options-56"><a class="header" href="#options-56">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>-p</code></dt>
+<dd>check for most POSIX systems</dd>
+<dt><code>-P</code></dt>
+<dd>check for empty names and leading "-"</dd>
+<dt><code>--portability</code></dt>
+<dd>check for all POSIX systems (equivalent to -p -P)</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pinky"><a class="header" href="#pinky">pinky</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-52"><a class="header" href="#summary-52">Summary</a></h2>
+pinky - lightweight finger
+<h2 id="options-57"><a class="header" href="#options-57">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>-l</code></dt>
+<dd>produce long format output for the specified USERs</dd>
+<dt><code>-b</code></dt>
+<dd>omit the user's home directory and shell in long format</dd>
+<dt><code>-h</code></dt>
+<dd>omit the user's project file in long format</dd>
+<dt><code>-p</code></dt>
+<dd>omit the user's plan file in long format</dd>
+<dt><code>-s</code></dt>
+<dd>do short format output, this is the default</dd>
+<dt><code>-f</code></dt>
+<dd>omit the line of column headings in short format</dd>
+<dt><code>-w</code></dt>
+<dd>omit the user's full name in short format</dd>
+<dt><code>-i</code></dt>
+<dd>omit the user's full name and remote host in short format</dd>
+<dt><code>-q</code></dt>
+<dd>omit the user's full name, remote host and idle time in short format</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pr"><a class="header" href="#pr">pr</a></h1>
+<div class="version">version: 
+</div>
+<h2 id="options-58"><a class="header" href="#options-58">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="printenv"><a class="header" href="#printenv">printenv</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-53"><a class="header" href="#summary-53">Summary</a></h2>
+Display the values of the specified environment VARIABLE(s), or (with no VARIABLE) display name and value pairs for them all.
+<h2 id="options-59"><a class="header" href="#options-59">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--null</code>, <code>-0</code></dt>
+<dd>end each output line with 0 byte rather than newline</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="printf"><a class="header" href="#printf">printf</a></h1>
+<div class="version">version: 
+</div>
+<h2 id="options-60"><a class="header" href="#options-60">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--version</code></dt>
+<dd></dd>
+<dt><code>--help</code></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ptx"><a class="header" href="#ptx">ptx</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="options-61"><a class="header" href="#options-61">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+<dt><code>--auto-reference</code>, <code>-A</code></dt>
+<dd>output automatically generated references</dd>
+<dt><code>--traditional</code>, <code>-G</code></dt>
+<dd>behave more like System V 'ptx'</dd>
+<dt><code>--flag-truncation</code>, <code>-F</code></dt>
+<dd>use STRING for flagging line truncations</dd>
+<dt><code>--macro-name</code>, <code>-M</code></dt>
+<dd>macro name to use instead of 'xx'</dd>
+<dt><code>--format=roff</code>, <code>-O</code></dt>
+<dd>generate output as roff directives</dd>
+<dt><code>--right-side-refs</code>, <code>-R</code></dt>
+<dd>put references at right, not counted in -w</dd>
+<dt><code>--sentence-regexp</code>, <code>-S</code></dt>
+<dd>for end of lines or end of sentences</dd>
+<dt><code>--format=tex</code>, <code>-T</code></dt>
+<dd>generate output as TeX directives</dd>
+<dt><code>--word-regexp</code>, <code>-W</code></dt>
+<dd>use REGEXP to match each keyword</dd>
+<dt><code>--break-file</code>, <code>-b</code></dt>
+<dd>word break characters in this FILE</dd>
+<dt><code>--ignore-case</code>, <code>-f</code></dt>
+<dd>fold lower case to upper case for sorting</dd>
+<dt><code>--gap-size</code>, <code>-g</code></dt>
+<dd>gap size in columns between output fields</dd>
+<dt><code>--ignore-file</code>, <code>-i</code></dt>
+<dd>read ignore word list from FILE</dd>
+<dt><code>--only-file</code>, <code>-o</code></dt>
+<dd>read only word list from this FILE</dd>
+<dt><code>--references</code>, <code>-r</code></dt>
+<dd>first field of each line is a reference</dd>
+<dt><code>--width</code>, <code>-w</code></dt>
+<dd>output width in columns, reference excluded</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pwd"><a class="header" href="#pwd">pwd</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-54"><a class="header" href="#summary-54">Summary</a></h2>
+Display the full filename of the current working directory.
+<h2 id="options-62"><a class="header" href="#options-62">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--logical</code>, <code>-L</code></dt>
+<dd>use PWD from environment, even if it contains symlinks</dd>
+<dt><code>--physical</code>, <code>-P</code></dt>
+<dd>avoid all symlinks</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="readlink"><a class="header" href="#readlink">readlink</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-55"><a class="header" href="#summary-55">Summary</a></h2>
+Print value of a symbolic link or canonical file name.
+<h2 id="options-63"><a class="header" href="#options-63">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--canonicalize</code>, <code>-f</code></dt>
+<dd>canonicalize by following every symlink in every component of the given name recursively; all but the last component must exist</dd>
+<dt><code>--canonicalize-existing</code>, <code>-e</code></dt>
+<dd>canonicalize by following every symlink in every component of the given name recursively, all components must exist</dd>
+<dt><code>--canonicalize-missing</code>, <code>-m</code></dt>
+<dd>canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence</dd>
+<dt><code>--no-newline</code>, <code>-n</code></dt>
+<dd>do not output the trailing delimiter</dd>
+<dt><code>--quiet</code>, <code>-q</code></dt>
+<dd>suppress most error messages</dd>
+<dt><code>--silent</code>, <code>-s</code></dt>
+<dd>suppress most error messages</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>report error message</dd>
+<dt><code>--zero</code>, <code>-z</code></dt>
+<dd>separate output with NUL rather than newline</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="realpath"><a class="header" href="#realpath">realpath</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-56"><a class="header" href="#summary-56">Summary</a></h2>
+print the resolved path
+<h2 id="options-64"><a class="header" href="#options-64">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--quiet</code>, <code>-q</code></dt>
+<dd>Do not print warnings for invalid paths</dd>
+<dt><code>--strip</code>, <code>-s</code></dt>
+<dd>Only strip '.' and '..' components, but don't resolve symbolic links</dd>
+<dt><code>--zero</code>, <code>-z</code></dt>
+<dd>Separate output filenames with \0 rather than newline</dd>
+<dt><code>--logical</code>, <code>-L</code></dt>
+<dd>resolve '..' components before symlinks</dd>
+<dt><code>--physical</code>, <code>-P</code></dt>
+<dd>resolve symlinks as encountered (default)</dd>
+<dt><code>--canonicalize-existing</code>, <code>-e</code></dt>
+<dd>canonicalize by following every symlink in every component of the given name recursively, all components must exist</dd>
+<dt><code>--canonicalize-missing</code>, <code>-m</code></dt>
+<dd>canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="relpath"><a class="header" href="#relpath">relpath</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-57"><a class="header" href="#summary-57">Summary</a></h2>
+Convert TO destination to the relative path from the FROM dir.
+If FROM path is omitted, current working dir will be used.
+<h2 id="options-65"><a class="header" href="#options-65">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>-d</code></dt>
+<dd>If any of FROM and TO is not subpath of DIR, output absolute path instead of relative</dd>
+<dt></dt>
+<dd></dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rm"><a class="header" href="#rm">rm</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-58"><a class="header" href="#summary-58">Summary</a></h2>
+Remove (unlink) the FILE(s)
+<h2 id="options-66"><a class="header" href="#options-66">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--force</code>, <code>-f</code></dt>
+<dd>ignore nonexistent files and arguments, never prompt</dd>
+<dt><code>--prompt before every removal</code>, <code>-i</code></dt>
+<dd></dd>
+<dt><code>-I</code></dt>
+<dd>prompt once before removing more than three files, or when removing recursively. Less intrusive than -i, while still giving some protection against most mistakes</dd>
+<dt><code>--interactive</code></dt>
+<dd>prompt according to WHEN: never, once (-I), or always (-i). Without WHEN, prompts always</dd>
+<dt><code>--one-file-system</code></dt>
+<dd>when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument (NOT IMPLEMENTED)</dd>
+<dt><code>--no-preserve-root</code></dt>
+<dd>do not treat '/' specially</dd>
+<dt><code>--preserve-root</code></dt>
+<dd>do not remove '/' (default)</dd>
+<dt><code>--recursive</code>, <code>-r</code></dt>
+<dd>remove directories and their contents recursively</dd>
+<dt><code>-R</code></dt>
+<dd>Equivalent to -r</dd>
+<dt><code>--dir</code>, <code>-d</code></dt>
+<dd>remove empty directories</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>explain what is being done</dd>
+<dt><code>--presume-input-tty</code></dt>
+<dd></dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rmdir"><a class="header" href="#rmdir">rmdir</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-59"><a class="header" href="#summary-59">Summary</a></h2>
+Remove the DIRECTORY(ies), if they are empty.
+<h2 id="options-67"><a class="header" href="#options-67">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--ignore-fail-on-non-empty</code></dt>
+<dd>ignore each failure that is solely because a directory is non-empty</dd>
+<dt><code>--parents</code>, <code>-p</code></dt>
+<dd>remove DIRECTORY and its ancestors; e.g.,
+                  'rmdir -p a/b/c' is similar to rmdir a/b/c a/b a</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>output a diagnostic for every directory processed</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="runcon"><a class="header" href="#runcon">runcon</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-60"><a class="header" href="#summary-60">Summary</a></h2>
+Run command with specified security context.
+<h2 id="options-68"><a class="header" href="#options-68">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--compute</code>, <code>-c</code></dt>
+<dd>Compute process transition context before modifying.</dd>
+<dt><code>--user</code>, <code>-u</code></dt>
+<dd>Set user USER in the target security context.</dd>
+<dt><code>--role</code>, <code>-r</code></dt>
+<dd>Set role ROLE in the target security context.</dd>
+<dt><code>--type</code>, <code>-t</code></dt>
+<dd>Set type TYPE in the target security context.</dd>
+<dt><code>--range</code>, <code>-l</code></dt>
+<dd>Set range RANGE in the target security context.</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="seq"><a class="header" href="#seq">seq</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-61"><a class="header" href="#summary-61">Summary</a></h2>
+Display numbers from FIRST to LAST, in steps of INCREMENT.
+<h2 id="options-69"><a class="header" href="#options-69">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--separator</code>, <code>-s</code></dt>
+<dd>Separator character (defaults to \n)</dd>
+<dt><code>--terminator</code>, <code>-t</code></dt>
+<dd>Terminator character (defaults to \n)</dd>
+<dt><code>--widths</code>, <code>-w</code></dt>
+<dd>Equalize widths of all numbers by padding with zeros</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="shred"><a class="header" href="#shred">shred</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-62"><a class="header" href="#summary-62">Summary</a></h2>
+Overwrite the specified FILE(s) repeatedly, in order to make it harder
+for even very expensive hardware probing to recover the data.
+<h2 id="options-70"><a class="header" href="#options-70">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--force</code>, <code>-f</code></dt>
+<dd>change permissions to allow writing if necessary</dd>
+<dt><code>--iterations</code>, <code>-n</code></dt>
+<dd>overwrite N times instead of the default (3)</dd>
+<dt><code>--size</code>, <code>-s</code></dt>
+<dd>shred this many bytes (suffixes like K, M, G accepted)</dd>
+<dt><code>--remove</code>, <code>-u</code></dt>
+<dd>truncate and remove file after overwriting;  See below</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>show progress</dd>
+<dt><code>--exact</code>, <code>-x</code></dt>
+<dd>do not round file sizes up to the next full block;
+this is the default for non-regular files</dd>
+<dt><code>--zero</code>, <code>-z</code></dt>
+<dd>add a final overwrite with zeros to hide shredding</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="shuf"><a class="header" href="#shuf">shuf</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="options-71"><a class="header" href="#options-71">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--echo</code>, <code>-e</code></dt>
+<dd>treat each ARG as an input line</dd>
+<dt><code>--input-range</code>, <code>-i</code></dt>
+<dd>treat each number LO through HI as an input line</dd>
+<dt><code>--head-count</code>, <code>-n</code></dt>
+<dd>output at most COUNT lines</dd>
+<dt><code>--output</code>, <code>-o</code></dt>
+<dd>write result to FILE instead of standard output</dd>
+<dt><code>--random-source</code></dt>
+<dd>get random bytes from FILE</dd>
+<dt><code>--repeat</code>, <code>-r</code></dt>
+<dd>output lines can be repeated</dd>
+<dt><code>--zero-terminated</code>, <code>-z</code></dt>
+<dd>line delimiter is NUL, not newline</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sleep"><a class="header" href="#sleep">sleep</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-63"><a class="header" href="#summary-63">Summary</a></h2>
+Pause for NUMBER seconds.
+<h2 id="options-72"><a class="header" href="#options-72">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd>pause for NUMBER seconds</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sort"><a class="header" href="#sort">sort</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-64"><a class="header" href="#summary-64">Summary</a></h2>
+Display sorted concatenation of all FILE(s).
+<h2 id="options-73"><a class="header" href="#options-73">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--sort</code></dt>
+<dd></dd>
+<dt><code>--human-numeric-sort</code>, <code>-h</code></dt>
+<dd>compare according to human readable sizes, eg 1M > 100k</dd>
+<dt><code>--month-sort</code>, <code>-M</code></dt>
+<dd>compare according to month name abbreviation</dd>
+<dt><code>--numeric-sort</code>, <code>-n</code></dt>
+<dd>compare according to string numerical value</dd>
+<dt><code>--general-numeric-sort</code>, <code>-g</code></dt>
+<dd>compare according to string general numerical value</dd>
+<dt><code>--version-sort</code>, <code>-V</code></dt>
+<dd>Sort by SemVer version number, eg 1.12.2 > 1.1.2</dd>
+<dt><code>--random-sort</code>, <code>-R</code></dt>
+<dd>shuffle in random order</dd>
+<dt><code>--dictionary-order</code>, <code>-d</code></dt>
+<dd>consider only blanks and alphanumeric characters</dd>
+<dt><code>--merge</code>, <code>-m</code></dt>
+<dd>merge already sorted files; do not sort</dd>
+<dt><code>--check</code>, <code>-c</code></dt>
+<dd>check for sorted input; do not sort</dd>
+<dt><code>--check-silent</code>, <code>-C</code></dt>
+<dd>exit successfully if the given file is already sorted,and exit with status 1 otherwise.</dd>
+<dt><code>--ignore-case</code>, <code>-f</code></dt>
+<dd>fold lower case to upper case characters</dd>
+<dt><code>--ignore-nonprinting</code>, <code>-i</code></dt>
+<dd>ignore nonprinting characters</dd>
+<dt><code>--ignore-leading-blanks</code>, <code>-b</code></dt>
+<dd>ignore leading blanks when finding sort keys in each line</dd>
+<dt><code>--output</code>, <code>-o</code></dt>
+<dd>write output to FILENAME instead of stdout</dd>
+<dt><code>--reverse</code>, <code>-r</code></dt>
+<dd>reverse the output</dd>
+<dt><code>--stable</code>, <code>-s</code></dt>
+<dd>stabilize sort by disabling last-resort comparison</dd>
+<dt><code>--unique</code>, <code>-u</code></dt>
+<dd>output only the first of an equal run</dd>
+<dt><code>--key</code>, <code>-k</code></dt>
+<dd>sort by a key</dd>
+<dt><code>--field-separator</code>, <code>-t</code></dt>
+<dd>custom separator for -k</dd>
+<dt><code>--zero-terminated</code>, <code>-z</code></dt>
+<dd>line delimiter is NUL, not newline</dd>
+<dt><code>--parallel</code></dt>
+<dd>change the number of threads running concurrently to NUM_THREADS</dd>
+<dt><code>--buffer-size</code>, <code>-S</code></dt>
+<dd>sets the maximum SIZE of each segment in number of sorted items</dd>
+<dt><code>--temporary-directory</code>, <code>-T</code></dt>
+<dd>use DIR for temporaries, not $TMPDIR or /tmp</dd>
+<dt><code>--compress-program</code></dt>
+<dd>compress temporary files with PROG, decompress with PROG -d</dd>
+<dt><code>--batch-size</code></dt>
+<dd>Merge at most N_MERGE inputs at once.</dd>
+<dt><code>--files0-from</code></dt>
+<dd>read input from the files specified by NUL-terminated NUL_FILES</dd>
+<dt><code>--debug</code></dt>
+<dd>underline the parts of the line that are actually used for sorting</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="split"><a class="header" href="#split">split</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-65"><a class="header" href="#summary-65">Summary</a></h2>
+Create output files containing consecutive or interleaved sections of input
+<h2 id="options-74"><a class="header" href="#options-74">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--bytes</code>, <code>-b</code></dt>
+<dd>put SIZE bytes per output file</dd>
+<dt><code>--line-bytes</code>, <code>-C</code></dt>
+<dd>put at most SIZE bytes of lines per output file</dd>
+<dt><code>--lines</code>, <code>-l</code></dt>
+<dd>put NUMBER lines/records per output file</dd>
+<dt><code>--additional-suffix</code></dt>
+<dd>additional suffix to append to output file names</dd>
+<dt><code>--filter</code></dt>
+<dd>write to shell COMMAND file name is $FILE (Currently not implemented for Windows)</dd>
+<dt><code>--numeric-suffixes</code>, <code>-d</code></dt>
+<dd>use numeric suffixes instead of alphabetic</dd>
+<dt><code>--suffix-length</code>, <code>-a</code></dt>
+<dd>use suffixes of length N (default 2)</dd>
+<dt><code>--verbose</code></dt>
+<dd>print a diagnostic just before each output file is opened</dd>
+<dt></dt>
+<dd></dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stat"><a class="header" href="#stat">stat</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-66"><a class="header" href="#summary-66">Summary</a></h2>
+Display file or file system status.
+<h2 id="options-75"><a class="header" href="#options-75">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--dereference</code>, <code>-L</code></dt>
+<dd>follow links</dd>
+<dt><code>--file-system</code>, <code>-f</code></dt>
+<dd>display file system status instead of file status</dd>
+<dt><code>--terse</code>, <code>-t</code></dt>
+<dd>print the information in terse form</dd>
+<dt><code>--format</code>, <code>-c</code></dt>
+<dd>use the specified FORMAT instead of the default;
+ output a newline after each use of FORMAT</dd>
+<dt><code>--printf</code></dt>
+<dd>like --format, but interpret backslash escapes,
+            and do not output a mandatory trailing newline;
+            if you want a newline, include 
+ in FORMAT</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stdbuf"><a class="header" href="#stdbuf">stdbuf</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-67"><a class="header" href="#summary-67">Summary</a></h2>
+Run COMMAND, with modified buffering operations for its standard streams.
+<p>Mandatory arguments to long options are mandatory for short options too.</p>
+<h2 id="options-76"><a class="header" href="#options-76">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--input</code>, <code>-i</code></dt>
+<dd>adjust standard input stream buffering</dd>
+<dt><code>--output</code>, <code>-o</code></dt>
+<dd>adjust standard output stream buffering</dd>
+<dt><code>--error</code>, <code>-e</code></dt>
+<dd>adjust standard error stream buffering</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sum"><a class="header" href="#sum">sum</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-68"><a class="header" href="#summary-68">Summary</a></h2>
+Checksum and count the blocks in a file.
+<h2 id="options-77"><a class="header" href="#options-77">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+<dt><code>-r</code></dt>
+<dd>use the BSD sum algorithm, use 1K blocks (default)</dd>
+<dt><code>--sysv</code>, <code>-s</code></dt>
+<dd>use System V sum algorithm, use 512 bytes blocks</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sync"><a class="header" href="#sync">sync</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-69"><a class="header" href="#summary-69">Summary</a></h2>
+Synchronize cached writes to persistent storage
+<h2 id="options-78"><a class="header" href="#options-78">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--file-system</code>, <code>-f</code></dt>
+<dd>sync the file systems that contain the files (Linux and Windows only)</dd>
+<dt><code>--data</code>, <code>-d</code></dt>
+<dd>sync only file data, no unneeded metadata (Linux only)</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tac"><a class="header" href="#tac">tac</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-70"><a class="header" href="#summary-70">Summary</a></h2>
+Write each file to standard output, last line first.
+<h2 id="options-79"><a class="header" href="#options-79">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--before</code>, <code>-b</code></dt>
+<dd>attach the separator before instead of after</dd>
+<dt><code>--regex</code>, <code>-r</code></dt>
+<dd>interpret the sequence as a regular expression</dd>
+<dt><code>--separator</code>, <code>-s</code></dt>
+<dd>use STRING as the separator instead of newline</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tail"><a class="header" href="#tail">tail</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-71"><a class="header" href="#summary-71">Summary</a></h2>
+Print the last 10 lines of each FILE to standard output.
+With more than one FILE, precede each with a header giving the file name.
+With no FILE, or when FILE is -, read standard input.
+<p>Mandatory arguments to long flags are mandatory for short flags too.</p>
+<h2 id="options-80"><a class="header" href="#options-80">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--bytes</code>, <code>-c</code></dt>
+<dd>Number of bytes to print</dd>
+<dt><code>--follow</code>, <code>-f</code></dt>
+<dd>Print the file as it grows</dd>
+<dt><code>--lines</code>, <code>-n</code></dt>
+<dd>Number of lines to print</dd>
+<dt><code>--pid</code></dt>
+<dd>with -f, terminate after process ID, PID dies</dd>
+<dt><code>--quiet</code>, <code>--silent</code>, <code>-q</code></dt>
+<dd>never output headers giving file names</dd>
+<dt><code>--sleep-interval</code>, <code>-s</code></dt>
+<dd>Number or seconds to sleep between polling the file when running with -f</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>always output headers giving file names</dd>
+<dt><code>--zero-terminated</code>, <code>-z</code></dt>
+<dd>Line delimiter is NUL, not newline</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tee"><a class="header" href="#tee">tee</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-72"><a class="header" href="#summary-72">Summary</a></h2>
+Copy standard input to each FILE, and also to standard output.
+<h2 id="options-81"><a class="header" href="#options-81">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--append</code>, <code>-a</code></dt>
+<dd>append to the given FILEs, do not overwrite</dd>
+<dt><code>--ignore-interrupts</code>, <code>-i</code></dt>
+<dd>ignore interrupt signals (ignored on non-Unix platforms)</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="test"><a class="header" href="#test">test</a></h1>
+<div class="version">version: 
+</div>
+<h2 id="options-82"><a class="header" href="#options-82">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="timeout"><a class="header" href="#timeout">timeout</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-73"><a class="header" href="#summary-73">Summary</a></h2>
+Start COMMAND, and kill it if still running after DURATION.
+<h2 id="options-83"><a class="header" href="#options-83">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--foreground</code></dt>
+<dd>when not running timeout directly from a shell prompt, allow COMMAND to read from the TTY and get TTY signals; in this mode, children of COMMAND will not be timed out</dd>
+<dt><code>-k</code></dt>
+<dd></dd>
+<dt><code>--preserve-status</code></dt>
+<dd>exit with the same status as COMMAND, even when the command times out</dd>
+<dt><code>--signal</code>, <code>-s</code></dt>
+<dd>specify the signal to be sent on timeout; SIGNAL may be a name like 'HUP' or a number; see 'kill -l' for a list of signals</dd>
+<dt><code>--verbose</code>, <code>-v</code></dt>
+<dd>diagnose to stderr any signal sent upon timeout</dd>
+<dt></dt>
+<dd></dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="touch"><a class="header" href="#touch">touch</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-74"><a class="header" href="#summary-74">Summary</a></h2>
+Update the access and modification times of each FILE to the current time.
+<h2 id="options-84"><a class="header" href="#options-84">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>-a</code></dt>
+<dd>change only the access time</dd>
+<dt><code>-t</code></dt>
+<dd>use [[CC]YY]MMDDhhmm[.ss] instead of the current time</dd>
+<dt><code>--date</code>, <code>-d</code></dt>
+<dd>parse argument and use it instead of current time</dd>
+<dt><code>-m</code></dt>
+<dd>change only the modification time</dd>
+<dt><code>--no-create</code>, <code>-c</code></dt>
+<dd>do not create any files</dd>
+<dt><code>--no-dereference</code>, <code>-h</code></dt>
+<dd>affect each symbolic link instead of any referenced file (only for systems that can change the timestamps of a symlink)</dd>
+<dt><code>--reference</code>, <code>-r</code></dt>
+<dd>use this file's times instead of the current time</dd>
+<dt><code>--time</code></dt>
+<dd>change only the specified time: "access", "atime", or "use" are equivalent to -a; "modify" or "mtime" are equivalent to -m</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tr"><a class="header" href="#tr">tr</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-75"><a class="header" href="#summary-75">Summary</a></h2>
+translate or delete characters
+<h2 id="options-85"><a class="header" href="#options-85">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--complement</code>, <code>-c</code></dt>
+<dd>use the complement of SET1</dd>
+<dt><code>-C</code></dt>
+<dd>same as -c</dd>
+<dt><code>--delete</code>, <code>-d</code></dt>
+<dd>delete characters in SET1, do not translate</dd>
+<dt><code>--squeeze-repeats</code>, <code>-s</code></dt>
+<dd>replace each sequence  of  a  repeated  character  that  is
+  listed  in the last specified SET, with a single occurrence
+  of that character</dd>
+<dt><code>--truncate</code>, <code>-t</code></dt>
+<dd>first truncate SET1 to length of SET2</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="true"><a class="header" href="#true">true</a></h1>
+<div class="version">version: 
+</div>
+<h2 id="options-86"><a class="header" href="#options-86">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="truncate"><a class="header" href="#truncate">truncate</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-76"><a class="header" href="#summary-76">Summary</a></h2>
+Shrink or extend the size of each file to the specified size.
+<h2 id="options-87"><a class="header" href="#options-87">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--io-blocks</code>, <code>-o</code></dt>
+<dd>treat SIZE as the number of I/O blocks of the file rather than bytes (NOT IMPLEMENTED)</dd>
+<dt><code>--no-create</code>, <code>-c</code></dt>
+<dd>do not create files that do not exist</dd>
+<dt><code>--reference</code>, <code>-r</code></dt>
+<dd>base the size of each file on the size of RFILE</dd>
+<dt><code>--size</code>, <code>-s</code></dt>
+<dd>set or adjust the size of each file according to SIZE, which is in bytes unless --io-blocks is specified</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tsort"><a class="header" href="#tsort">tsort</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-77"><a class="header" href="#summary-77">Summary</a></h2>
+Topological sort the strings in FILE.
+Strings are defined as any sequence of tokens separated by whitespace (tab, space, or newline).
+If FILE is not passed in, stdin is used instead.
+<h2 id="options-88"><a class="header" href="#options-88">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tty"><a class="header" href="#tty">tty</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-78"><a class="header" href="#summary-78">Summary</a></h2>
+Print the file name of the terminal connected to standard input.
+<h2 id="options-89"><a class="header" href="#options-89">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--silent</code>, <code>--quiet</code>, <code>-s</code></dt>
+<dd>print nothing, only return an exit status</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="uname"><a class="header" href="#uname">uname</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-79"><a class="header" href="#summary-79">Summary</a></h2>
+Print certain system information.  With no OPTION, same as -s.
+<h2 id="options-90"><a class="header" href="#options-90">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--all</code>, <code>-a</code></dt>
+<dd>Behave as though all of the options -mnrsv were specified.</dd>
+<dt><code>--kernel-name</code>, <code>-s</code></dt>
+<dd>print the kernel name.</dd>
+<dt><code>--nodename</code>, <code>-n</code></dt>
+<dd>print the nodename (the nodename may be a name that the system is known by to a communications network).</dd>
+<dt><code>--kernel-release</code>, <code>-r</code></dt>
+<dd>print the operating system release.</dd>
+<dt><code>--kernel-version</code>, <code>-v</code></dt>
+<dd>print the operating system version.</dd>
+<dt><code>--hardware-platform</code>, <code>-i</code></dt>
+<dd>print the hardware platform (non-portable)</dd>
+<dt><code>--machine</code>, <code>-m</code></dt>
+<dd>print the machine hardware name.</dd>
+<dt><code>--processor</code>, <code>-p</code></dt>
+<dd>print the processor type (non-portable)</dd>
+<dt><code>--operating-system</code>, <code>-o</code></dt>
+<dd>print the operating system name.</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unexpand"><a class="header" href="#unexpand">unexpand</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-80"><a class="header" href="#summary-80">Summary</a></h2>
+Convert blanks in each FILE to tabs, writing to standard output.
+<pre><code>             With no FILE, or when FILE is -, read standard input.
+</code></pre>
+<h2 id="options-91"><a class="header" href="#options-91">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+<dt><code>--all</code>, <code>-a</code></dt>
+<dd>convert all blanks, instead of just initial blanks</dd>
+<dt><code>--first-only</code></dt>
+<dd>convert only leading sequences of blanks (overrides -a)</dd>
+<dt><code>--tabs</code>, <code>-t</code></dt>
+<dd></dd>
+<dt><code>--no-utf8</code>, <code>-U</code></dt>
+<dd>interpret input file as 8-bit ASCII rather than UTF-8</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="uniq"><a class="header" href="#uniq">uniq</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-81"><a class="header" href="#summary-81">Summary</a></h2>
+Report or omit repeated lines.
+<h2 id="options-92"><a class="header" href="#options-92">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--all-repeated</code>, <code>-D</code></dt>
+<dd>print all duplicate lines. Delimiting is done with blank lines. [default: none]</dd>
+<dt><code>--group</code></dt>
+<dd>show all items, separating groups with an empty line. [default: separate]</dd>
+<dt><code>--check-chars</code>, <code>-w</code></dt>
+<dd>compare no more than N characters in lines</dd>
+<dt><code>--count</code>, <code>-c</code></dt>
+<dd>prefix lines by the number of occurrences</dd>
+<dt><code>--ignore-case</code>, <code>-i</code></dt>
+<dd>ignore differences in case when comparing</dd>
+<dt><code>--repeated</code>, <code>-d</code></dt>
+<dd>only print duplicate lines</dd>
+<dt><code>--skip-chars</code>, <code>-s</code></dt>
+<dd>avoid comparing the first N characters</dd>
+<dt><code>--skip-fields</code>, <code>-f</code></dt>
+<dd>avoid comparing the first N fields</dd>
+<dt><code>--unique</code>, <code>-u</code></dt>
+<dd>only print unique lines</dd>
+<dt><code>--zero-terminated</code>, <code>-z</code></dt>
+<dd>end lines with 0 byte, not newline</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unlink"><a class="header" href="#unlink">unlink</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-82"><a class="header" href="#summary-82">Summary</a></h2>
+Unlink the file at FILE.
+<h2 id="options-93"><a class="header" href="#options-93">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="uptime"><a class="header" href="#uptime">uptime</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-83"><a class="header" href="#summary-83">Summary</a></h2>
+Display the current time, the length of time the system has been up,
+the number of users on the system, and the average number of jobs
+in the run queue over the last 1, 5 and 15 minutes.
+<h2 id="options-94"><a class="header" href="#options-94">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--since</code>, <code>-s</code></dt>
+<dd>system up since</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="users"><a class="header" href="#users">users</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-84"><a class="header" href="#summary-84">Summary</a></h2>
+Print the user names of users currently logged in to the current host
+<h2 id="options-95"><a class="header" href="#options-95">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="wc"><a class="header" href="#wc">wc</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-85"><a class="header" href="#summary-85">Summary</a></h2>
+Display newline, word, and byte counts for each FILE, and a total line if
+more than one FILE is specified.
+<h2 id="options-96"><a class="header" href="#options-96">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--bytes</code>, <code>-c</code></dt>
+<dd>print the byte counts</dd>
+<dt><code>--chars</code>, <code>-m</code></dt>
+<dd>print the character counts</dd>
+<dt><code>--lines</code>, <code>-l</code></dt>
+<dd>print the newline counts</dd>
+<dt><code>--max-line-length</code>, <code>-L</code></dt>
+<dd>print the length of the longest line</dd>
+<dt><code>--words</code>, <code>-w</code></dt>
+<dd>print the word counts</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="who"><a class="header" href="#who">who</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-86"><a class="header" href="#summary-86">Summary</a></h2>
+Print information about users who are currently logged in.
+<h2 id="options-97"><a class="header" href="#options-97">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt><code>--all</code>, <code>-a</code></dt>
+<dd>same as -b -d --login -p -r -t -T -u</dd>
+<dt><code>--boot</code>, <code>-b</code></dt>
+<dd>time of last system boot</dd>
+<dt><code>--dead</code>, <code>-d</code></dt>
+<dd>print dead processes</dd>
+<dt><code>--heading</code>, <code>-H</code></dt>
+<dd>print line of column headings</dd>
+<dt><code>--login</code>, <code>-l</code></dt>
+<dd>print system login processes</dd>
+<dt><code>--lookup</code></dt>
+<dd>attempt to canonicalize hostnames via DNS</dd>
+<dt><code>-m</code></dt>
+<dd>only hostname and user associated with stdin</dd>
+<dt><code>--process</code>, <code>-p</code></dt>
+<dd>print active processes spawned by init</dd>
+<dt><code>--count</code>, <code>-q</code></dt>
+<dd>all login names and number of users logged on</dd>
+<dt><code>--runlevel</code>, <code>-r</code></dt>
+<dd>print current runlevel</dd>
+<dt><code>--short</code>, <code>-s</code></dt>
+<dd>print only name, line, and time (default)</dd>
+<dt><code>--time</code>, <code>-t</code></dt>
+<dd>print last system clock change</dd>
+<dt><code>--users</code>, <code>-u</code></dt>
+<dd>list users logged in</dd>
+<dt><code>--mesg</code>, <code>--message</code>, <code>--writable</code>, <code>-T</code></dt>
+<dd>add user's message status as +, - or ?</dd>
+<dt><code>-w</code></dt>
+<dd>same as -T</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="whoami"><a class="header" href="#whoami">whoami</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-87"><a class="header" href="#summary-87">Summary</a></h2>
+Print the current username.
+<h2 id="options-98"><a class="header" href="#options-98">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+</dl>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="yes"><a class="header" href="#yes">yes</a></h1>
+<div class="version">version: 0.0.9
+</div>
+<h2 id="summary-88"><a class="header" href="#summary-88">Summary</a></h2>
+yes ~ (uutils) repeatedly display a line with STRING (or 'y')
+<h2 id="options-99"><a class="header" href="#options-99">Options</a></h2>
+<dl><dt><code>--help</code></dt>
+<dd>Print help information</dd>
+<dt><code>--version</code></dt>
+<dd>Print version information</dd>
+<dt></dt>
+<dd></dd>
+</dl>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
