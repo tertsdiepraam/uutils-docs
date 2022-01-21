@@ -151,12 +151,13 @@
                         <h1 id="timeout"><a class="header" href="#timeout">timeout</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Start COMMAND, and kill it if still running after DURATION.
+<pre><code>timeout [OPTIONS] &lt;duration&gt; &lt;command&gt;...
+</code></pre>
+<p>Start COMMAND, and kill it if still running after DURATION.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--foreground</code></dt>
 <dd>when not running timeout directly from a shell prompt, allow COMMAND to read from the TTY and get TTY signals; in this mode, children of COMMAND will not be timed out</dd>

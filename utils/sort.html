@@ -151,8 +151,9 @@
                         <h1 id="sort"><a class="header" href="#sort">sort</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Display sorted concatenation of all FILE(s).
+<pre><code>sort [OPTIONS] [--] [files]...
+</code></pre>
+<p>Display sorted concatenation of all FILE(s).</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
 <dl><dt><code>--help</code></dt>
 <dd>Print help information</dd>
@@ -186,7 +187,7 @@ Display sorted concatenation of all FILE(s).
 <dd>ignore nonprinting characters</dd>
 <dt><code>--ignore-leading-blanks</code>, <code>-b</code></dt>
 <dd>ignore leading blanks when finding sort keys in each line</dd>
-<dt><code>--output</code>, <code>-o</code></dt>
+<dt><code>--output=&lt;FILENAME&gt;</code>, <code>-o &lt;FILENAME&gt;</code></dt>
 <dd>write output to FILENAME instead of stdout</dd>
 <dt><code>--reverse</code>, <code>-r</code></dt>
 <dd>reverse the output</dd>
@@ -200,17 +201,17 @@ Display sorted concatenation of all FILE(s).
 <dd>custom separator for -k</dd>
 <dt><code>--zero-terminated</code>, <code>-z</code></dt>
 <dd>line delimiter is NUL, not newline</dd>
-<dt><code>--parallel</code></dt>
+<dt><code>--parallel=&lt;NUM_THREADS&gt;</code></dt>
 <dd>change the number of threads running concurrently to NUM_THREADS</dd>
-<dt><code>--buffer-size</code>, <code>-S</code></dt>
+<dt><code>--buffer-size=&lt;SIZE&gt;</code>, <code>-S &lt;SIZE&gt;</code></dt>
 <dd>sets the maximum SIZE of each segment in number of sorted items</dd>
-<dt><code>--temporary-directory</code>, <code>-T</code></dt>
+<dt><code>--temporary-directory=&lt;DIR&gt;</code>, <code>-T &lt;DIR&gt;</code></dt>
 <dd>use DIR for temporaries, not $TMPDIR or /tmp</dd>
-<dt><code>--compress-program</code></dt>
+<dt><code>--compress-program=&lt;PROG&gt;</code></dt>
 <dd>compress temporary files with PROG, decompress with PROG -d</dd>
-<dt><code>--batch-size</code></dt>
+<dt><code>--batch-size=&lt;N_MERGE&gt;</code></dt>
 <dd>Merge at most N_MERGE inputs at once.</dd>
-<dt><code>--files0-from</code></dt>
+<dt><code>--files0-from=&lt;NUL_FILES&gt;</code></dt>
 <dd>read input from the files specified by NUL-terminated NUL_FILES</dd>
 <dt><code>--debug</code></dt>
 <dd>underline the parts of the line that are actually used for sorting</dd>

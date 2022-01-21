@@ -151,19 +151,20 @@
                         <h1 id="shred"><a class="header" href="#shred">shred</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Overwrite the specified FILE(s) repeatedly, in order to make it harder
-for even very expensive hardware probing to recover the data.
+<pre><code>shred [OPTIONS]
+</code></pre>
+<p>Overwrite the specified FILE(s) repeatedly, in order to make it harder
+for even very expensive hardware probing to recover the data.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--force</code>, <code>-f</code></dt>
 <dd>change permissions to allow writing if necessary</dd>
-<dt><code>--iterations</code>, <code>-n</code></dt>
+<dt><code>--iterations=&lt;NUMBER&gt;</code>, <code>-n &lt;NUMBER&gt;</code></dt>
 <dd>overwrite N times instead of the default (3)</dd>
-<dt><code>--size</code>, <code>-s</code></dt>
+<dt><code>--size=&lt;N&gt;</code>, <code>-s &lt;N&gt;</code></dt>
 <dd>shred this many bytes (suffixes like K, M, G accepted)</dd>
 <dt><code>--remove</code>, <code>-u</code></dt>
 <dd>truncate and remove file after overwriting;  See below</dd>

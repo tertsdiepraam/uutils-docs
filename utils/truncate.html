@@ -151,20 +151,21 @@
                         <h1 id="truncate"><a class="header" href="#truncate">truncate</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Shrink or extend the size of each file to the specified size.
+<pre><code>truncate [OPTIONS] &lt;FILE&gt;...
+</code></pre>
+<p>Shrink or extend the size of each file to the specified size.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--io-blocks</code>, <code>-o</code></dt>
 <dd>treat SIZE as the number of I/O blocks of the file rather than bytes (NOT IMPLEMENTED)</dd>
 <dt><code>--no-create</code>, <code>-c</code></dt>
 <dd>do not create files that do not exist</dd>
-<dt><code>--reference</code>, <code>-r</code></dt>
+<dt><code>--reference=&lt;RFILE&gt;</code>, <code>-r &lt;RFILE&gt;</code></dt>
 <dd>base the size of each file on the size of RFILE</dd>
-<dt><code>--size</code>, <code>-s</code></dt>
+<dt><code>--size=&lt;SIZE&gt;</code>, <code>-s &lt;SIZE&gt;</code></dt>
 <dd>set or adjust the size of each file according to SIZE, which is in bytes unless --io-blocks is specified</dd>
 <dt></dt>
 <dd></dd>

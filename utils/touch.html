@@ -151,18 +151,19 @@
                         <h1 id="touch"><a class="header" href="#touch">touch</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Update the access and modification times of each FILE to the current time.
+<pre><code>touch [OPTIONS] [files]...
+</code></pre>
+<p>Update the access and modification times of each FILE to the current time.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
 <dl><dt><code>--help</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>-a</code></dt>
 <dd>change only the access time</dd>
-<dt><code>-t</code></dt>
+<dt><code>-t &lt;STAMP&gt;</code></dt>
 <dd>use [[CC]YY]MMDDhhmm[.ss] instead of the current time</dd>
-<dt><code>--date</code>, <code>-d</code></dt>
+<dt><code>--date=&lt;STRING&gt;</code>, <code>-d &lt;STRING&gt;</code></dt>
 <dd>parse argument and use it instead of current time</dd>
 <dt><code>-m</code></dt>
 <dd>change only the modification time</dd>
@@ -170,9 +171,9 @@ Update the access and modification times of each FILE to the current time.
 <dd>do not create any files</dd>
 <dt><code>--no-dereference</code>, <code>-h</code></dt>
 <dd>affect each symbolic link instead of any referenced file (only for systems that can change the timestamps of a symlink)</dd>
-<dt><code>--reference</code>, <code>-r</code></dt>
+<dt><code>--reference=&lt;FILE&gt;</code>, <code>-r &lt;FILE&gt;</code></dt>
 <dd>use this file's times instead of the current time</dd>
-<dt><code>--time</code></dt>
+<dt><code>--time=&lt;WORD&gt;</code></dt>
 <dd>change only the specified time: "access", "atime", or "use" are equivalent to -a; "modify" or "mtime" are equivalent to -m</dd>
 <dt></dt>
 <dd></dd>

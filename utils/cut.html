@@ -151,20 +151,21 @@
                         <h1 id="cut"><a class="header" href="#cut">cut</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Prints specified byte or field columns from each line of stdin or the input files
+<pre><code>[-d] [-s] [-z] [--output-delimiter] ((-f|-b|-c) {{sequence}}) {{sourcefile}}+
+</code></pre>
+<p>Prints specified byte or field columns from each line of stdin or the input files</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--bytes</code>, <code>-b</code></dt>
+<dt><code>--bytes=&lt;LIST&gt;</code>, <code>-b &lt;LIST&gt;</code></dt>
 <dd>filter byte columns from the input source</dd>
-<dt><code>--characters</code>, <code>-c</code></dt>
+<dt><code>--characters=&lt;LIST&gt;</code>, <code>-c &lt;LIST&gt;</code></dt>
 <dd>alias for character mode</dd>
-<dt><code>--delimiter</code>, <code>-d</code></dt>
+<dt><code>--delimiter=&lt;DELIM&gt;</code>, <code>-d &lt;DELIM&gt;</code></dt>
 <dd>specify the delimiter character that separates fields in the input source. Defaults to Tab.</dd>
-<dt><code>--fields</code>, <code>-f</code></dt>
+<dt><code>--fields=&lt;LIST&gt;</code>, <code>-f &lt;LIST&gt;</code></dt>
 <dd>filter field columns from the input source</dd>
 <dt><code>--complement</code></dt>
 <dd>invert the filter - instead of displaying only the filtered columns, display all but those columns</dd>
@@ -172,7 +173,7 @@ Prints specified byte or field columns from each line of stdin or the input file
 <dd>in field mode, only print lines which contain the delimiter</dd>
 <dt><code>--zero-terminated</code>, <code>-z</code></dt>
 <dd>instead of filtering columns based on line, filter columns based on \0 (NULL character)</dd>
-<dt><code>--output-delimiter</code></dt>
+<dt><code>--output-delimiter=&lt;NEW_DELIM&gt;</code></dt>
 <dd>in field mode, replace the delimiter in output lines with this option's argument</dd>
 <dt></dt>
 <dd></dd>

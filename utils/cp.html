@@ -151,14 +151,15 @@
                         <h1 id="cp"><a class="header" href="#cp">cp</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+<pre><code>cp [OPTIONS] [--] [paths]...
+</code></pre>
+<p>Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--target-directory</code>, <code>-t</code></dt>
+<dt><code>--target-directory=&lt;target-directory&gt;</code>, <code>-t &lt;target-directory&gt;</code></dt>
 <dd>copy all SOURCE arguments into target-directory</dd>
 <dt><code>--no-target-directory</code>, <code>-T</code></dt>
 <dd>Treat DEST as a regular file and not a directory</dd>
@@ -182,23 +183,23 @@ Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
 <dd>if an existing destination file cannot be opened, remove it and try again (this option is ignored when the -n option is also used). Currently not implemented for Windows.</dd>
 <dt><code>--remove-destination</code></dt>
 <dd>remove each existing destination file before attempting to open it (contrast with --force). On Windows, current only works for writeable files.</dd>
-<dt><code>--backup</code></dt>
+<dt><code>--backup=&lt;CONTROL&gt;</code></dt>
 <dd>make a backup of each existing destination file</dd>
 <dt><code>-b</code></dt>
 <dd>like --backup but does not accept an argument</dd>
-<dt><code>--suffix</code>, <code>-S</code></dt>
+<dt><code>--suffix=&lt;SUFFIX&gt;</code>, <code>-S &lt;SUFFIX&gt;</code></dt>
 <dd>override the usual backup suffix</dd>
 <dt><code>--update</code>, <code>-u</code></dt>
 <dd>copy only when the SOURCE file is newer than the destination file or when the destination file is missing</dd>
-<dt><code>--reflink</code></dt>
+<dt><code>--reflink=&lt;WHEN&gt;</code></dt>
 <dd>control clone/CoW copies. See below</dd>
 <dt><code>--attributes-only</code></dt>
 <dd>Don't copy the file data, just the attributes</dd>
-<dt><code>--preserve</code></dt>
+<dt><code>--preserve=&lt;ATTR_LIST&gt;</code></dt>
 <dd>Preserve the specified attributes (default: mode, ownership (unix only), timestamps), if possible additional attributes: context, links, xattr, all</dd>
 <dt><code>--preserve-default-attributes</code>, <code>-p</code></dt>
 <dd>same as --preserve=mode,ownership(unix only),timestamps</dd>
-<dt><code>--no-preserve</code></dt>
+<dt><code>--no-preserve=&lt;ATTR_LIST&gt;</code></dt>
 <dd>don't preserve the specified attributes</dd>
 <dt><code>--parents</code></dt>
 <dd>use full source file name under DIRECTORY</dd>
@@ -214,9 +215,9 @@ Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
 <dd>stay on this file system</dd>
 <dt><code>--copy-contents</code></dt>
 <dd>NotImplemented: copy contents of special files when recursive</dd>
-<dt><code>--sparse</code></dt>
+<dt><code>--sparse=&lt;WHEN&gt;</code></dt>
 <dd>NotImplemented: control creation of sparse files. See below</dd>
-<dt><code>--context</code></dt>
+<dt><code>--context=&lt;CTX&gt;</code></dt>
 <dd>NotImplemented: set SELinux security context of destination file to default type</dd>
 <dt><code>-H</code></dt>
 <dd>NotImplemented: follow command-line symbolic links in SOURCE</dd>

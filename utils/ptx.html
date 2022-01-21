@@ -151,10 +151,12 @@
                         <h1 id="ptx"><a class="header" href="#ptx">ptx</a></h1>
 <div class="version">version: 0.0.9
 </div>
+<pre><code>Usage: ptx [OPTION]... [INPUT]...   (without -G) or: ptx -G [OPTION]... [INPUT [OUTPUT]]
+</code></pre>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt></dt>
 <dd></dd>
@@ -162,33 +164,33 @@
 <dd>output automatically generated references</dd>
 <dt><code>--traditional</code>, <code>-G</code></dt>
 <dd>behave more like System V 'ptx'</dd>
-<dt><code>--flag-truncation</code>, <code>-F</code></dt>
+<dt><code>--flag-truncation=&lt;STRING&gt;</code>, <code>-F &lt;STRING&gt;</code></dt>
 <dd>use STRING for flagging line truncations</dd>
-<dt><code>--macro-name</code>, <code>-M</code></dt>
+<dt><code>--macro-name=&lt;STRING&gt;</code>, <code>-M &lt;STRING&gt;</code></dt>
 <dd>macro name to use instead of 'xx'</dd>
 <dt><code>--format=roff</code>, <code>-O</code></dt>
 <dd>generate output as roff directives</dd>
 <dt><code>--right-side-refs</code>, <code>-R</code></dt>
 <dd>put references at right, not counted in -w</dd>
-<dt><code>--sentence-regexp</code>, <code>-S</code></dt>
+<dt><code>--sentence-regexp=&lt;REGEXP&gt;</code>, <code>-S &lt;REGEXP&gt;</code></dt>
 <dd>for end of lines or end of sentences</dd>
 <dt><code>--format=tex</code>, <code>-T</code></dt>
 <dd>generate output as TeX directives</dd>
-<dt><code>--word-regexp</code>, <code>-W</code></dt>
+<dt><code>--word-regexp=&lt;REGEXP&gt;</code>, <code>-W &lt;REGEXP&gt;</code></dt>
 <dd>use REGEXP to match each keyword</dd>
-<dt><code>--break-file</code>, <code>-b</code></dt>
+<dt><code>--break-file=&lt;FILE&gt;</code>, <code>-b &lt;FILE&gt;</code></dt>
 <dd>word break characters in this FILE</dd>
 <dt><code>--ignore-case</code>, <code>-f</code></dt>
 <dd>fold lower case to upper case for sorting</dd>
-<dt><code>--gap-size</code>, <code>-g</code></dt>
+<dt><code>--gap-size=&lt;NUMBER&gt;</code>, <code>-g &lt;NUMBER&gt;</code></dt>
 <dd>gap size in columns between output fields</dd>
-<dt><code>--ignore-file</code>, <code>-i</code></dt>
+<dt><code>--ignore-file=&lt;FILE&gt;</code>, <code>-i &lt;FILE&gt;</code></dt>
 <dd>read ignore word list from FILE</dd>
-<dt><code>--only-file</code>, <code>-o</code></dt>
+<dt><code>--only-file=&lt;FILE&gt;</code>, <code>-o &lt;FILE&gt;</code></dt>
 <dd>read only word list from this FILE</dd>
-<dt><code>--references</code>, <code>-r</code></dt>
+<dt><code>--references=&lt;FILE&gt;</code>, <code>-r &lt;FILE&gt;</code></dt>
 <dd>first field of each line is a reference</dd>
-<dt><code>--width</code>, <code>-w</code></dt>
+<dt><code>--width=&lt;NUMBER&gt;</code>, <code>-w &lt;NUMBER&gt;</code></dt>
 <dd>output width in columns, reference excluded</dd>
 </dl>
 

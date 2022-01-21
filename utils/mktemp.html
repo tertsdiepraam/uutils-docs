@@ -151,12 +151,13 @@
                         <h1 id="mktemp"><a class="header" href="#mktemp">mktemp</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-create a temporary file or directory.
+<pre><code>mktemp [OPTIONS] [template]...
+</code></pre>
+<p>create a temporary file or directory.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--directory</code>, <code>-d</code></dt>
 <dd>Make a directory instead of a file</dd>
@@ -164,9 +165,9 @@ create a temporary file or directory.
 <dd>do not create anything; merely print a name (unsafe)</dd>
 <dt><code>--quiet</code>, <code>-q</code></dt>
 <dd>Fail silently if an error occurs.</dd>
-<dt><code>--suffix</code></dt>
+<dt><code>--suffix=&lt;SUFFIX&gt;</code></dt>
 <dd>append SUFFIX to TEMPLATE; SUFFIX must not contain a path separator. This option is implied if TEMPLATE does not end with X.</dd>
-<dt><code>--tmpdir</code>, <code>-p</code></dt>
+<dt><code>--tmpdir=&lt;DIR&gt;</code>, <code>-p &lt;DIR&gt;</code></dt>
 <dd>interpret TEMPLATE relative to DIR; if DIR is not specified, use $TMPDIR ($TMP on windows) if set, else /tmp. With this option, TEMPLATE must not be an absolute name; unlike with -t, TEMPLATE may contain slashes, but mktemp creates only the final component</dd>
 <dt><code>-t</code></dt>
 <dd>Generate a template (using the supplied prefix and TMPDIR (TMP on windows) if set) to create a filename template [deprecated]</dd>

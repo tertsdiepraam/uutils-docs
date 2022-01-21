@@ -151,19 +151,20 @@
                         <h1 id="basename"><a class="header" href="#basename">basename</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Print NAME with any leading directory components removed
-If specified, also remove a trailing SUFFIX
+<pre><code>basename [OPTIONS]
+</code></pre>
+<p>Print NAME with any leading directory components removed
+If specified, also remove a trailing SUFFIX</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--multiple</code>, <code>-a</code></dt>
 <dd>support multiple arguments and treat each as a NAME</dd>
 <dt></dt>
 <dd></dd>
-<dt><code>--suffix</code>, <code>-s</code></dt>
+<dt><code>--suffix=&lt;SUFFIX&gt;</code>, <code>-s &lt;SUFFIX&gt;</code></dt>
 <dd>remove a trailing SUFFIX; implies -a</dd>
 <dt><code>--zero</code>, <code>-z</code></dt>
 <dd>end each output line with NUL, not newline</dd>

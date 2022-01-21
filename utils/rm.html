@@ -151,12 +151,13 @@
                         <h1 id="rm"><a class="header" href="#rm">rm</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Remove (unlink) the FILE(s)
+<pre><code>rm [OPTIONS] [files]...
+</code></pre>
+<p>Remove (unlink) the FILE(s)</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--force</code>, <code>-f</code></dt>
 <dd>ignore nonexistent files and arguments, never prompt</dd>
@@ -164,7 +165,7 @@ Remove (unlink) the FILE(s)
 <dd></dd>
 <dt><code>-I</code></dt>
 <dd>prompt once before removing more than three files, or when removing recursively. Less intrusive than -i, while still giving some protection against most mistakes</dd>
-<dt><code>--interactive</code></dt>
+<dt><code>--interactive=&lt;WHEN&gt;</code></dt>
 <dd>prompt according to WHEN: never, once (-I), or always (-i). Without WHEN, prompts always</dd>
 <dt><code>--one-file-system</code></dt>
 <dd>when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument (NOT IMPLEMENTED)</dd>

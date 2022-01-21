@@ -151,18 +151,19 @@
                         <h1 id="uniq"><a class="header" href="#uniq">uniq</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Report or omit repeated lines.
+<pre><code>uniq [OPTIONS] [--] [files]...
+</code></pre>
+<p>Report or omit repeated lines.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--all-repeated</code>, <code>-D</code></dt>
+<dt><code>--all-repeated=&lt;delimit-method&gt;</code>, <code>-D &lt;delimit-method&gt;</code></dt>
 <dd>print all duplicate lines. Delimiting is done with blank lines. [default: none]</dd>
-<dt><code>--group</code></dt>
+<dt><code>--group=&lt;group-method&gt;</code></dt>
 <dd>show all items, separating groups with an empty line. [default: separate]</dd>
-<dt><code>--check-chars</code>, <code>-w</code></dt>
+<dt><code>--check-chars=&lt;N&gt;</code>, <code>-w &lt;N&gt;</code></dt>
 <dd>compare no more than N characters in lines</dd>
 <dt><code>--count</code>, <code>-c</code></dt>
 <dd>prefix lines by the number of occurrences</dd>
@@ -170,9 +171,9 @@ Report or omit repeated lines.
 <dd>ignore differences in case when comparing</dd>
 <dt><code>--repeated</code>, <code>-d</code></dt>
 <dd>only print duplicate lines</dd>
-<dt><code>--skip-chars</code>, <code>-s</code></dt>
+<dt><code>--skip-chars=&lt;N&gt;</code>, <code>-s &lt;N&gt;</code></dt>
 <dd>avoid comparing the first N characters</dd>
-<dt><code>--skip-fields</code>, <code>-f</code></dt>
+<dt><code>--skip-fields=&lt;N&gt;</code>, <code>-f &lt;N&gt;</code></dt>
 <dd>avoid comparing the first N fields</dd>
 <dt><code>--unique</code>, <code>-u</code></dt>
 <dd>only print unique lines</dd>

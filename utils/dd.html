@@ -151,32 +151,33 @@
                         <h1 id="dd"><a class="header" href="#dd">dd</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-copy, and optionally convert, a file system resource
+<pre><code>dd [OPTIONS]
+</code></pre>
+<p>copy, and optionally convert, a file system resource</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--if</code></dt>
+<dt><code>--if=&lt;FILE&gt;</code></dt>
 <dd>(alternatively if=FILE) specifies the file used for input. When not specified, stdin is used instead</dd>
-<dt><code>--of</code></dt>
+<dt><code>--of=&lt;FILE&gt;</code></dt>
 <dd>(alternatively of=FILE) specifies the file used for output. When not specified, stdout is used instead</dd>
-<dt><code>--ibs</code></dt>
+<dt><code>--ibs=&lt;N&gt;</code></dt>
 <dd>(alternatively ibs=N) specifies the size of buffer used for reads (default: 512). Multiplier strings permitted.</dd>
-<dt><code>--obs</code></dt>
+<dt><code>--obs=&lt;N&gt;</code></dt>
 <dd>(alternatively obs=N) specifies the size of buffer used for writes (default: 512). Multiplier strings permitted.</dd>
-<dt><code>--bs</code></dt>
+<dt><code>--bs=&lt;N&gt;</code></dt>
 <dd>(alternatively bs=N) specifies ibs=N and obs=N (default: 512). If ibs or obs are also specified, bs=N takes precedence. Multiplier strings permitted.</dd>
-<dt><code>--cbs</code></dt>
+<dt><code>--cbs=&lt;N&gt;</code></dt>
 <dd>(alternatively cbs=BYTES) specifies the 'conversion block size' in bytes. Applies to the conv=block, and conv=unblock operations. Multiplier strings permitted.</dd>
-<dt><code>--skip</code></dt>
+<dt><code>--skip=&lt;N&gt;</code></dt>
 <dd>(alternatively skip=N) causes N ibs-sized records of input to be skipped before beginning copy/convert operations. See iflag=count_bytes if skipping N bytes is preferred. Multiplier strings permitted.</dd>
-<dt><code>--seek</code></dt>
+<dt><code>--seek=&lt;N&gt;</code></dt>
 <dd>(alternatively seek=N) seeks N obs-sized records into output before beginning copy/convert operations. See oflag=seek_bytes if seeking N bytes is preferred. Multiplier strings permitted.</dd>
-<dt><code>--count</code></dt>
+<dt><code>--count=&lt;N&gt;</code></dt>
 <dd>(alternatively count=N) stop reading input after N ibs-sized read operations rather than proceeding until EOF. See iflag=count_bytes if stopping after N bytes is preferred. Multiplier strings permitted.</dd>
-<dt><code>--status</code></dt>
+<dt><code>--status=&lt;LEVEL&gt;</code></dt>
 <dd>(alternatively status=LEVEL) controls whether volume and performance stats are written to stderr.
 <p>When unspecified, dd will print stats upon completion. An example is below.
 6+0 records in
@@ -190,7 +191,7 @@ noxfer: Print final volume stats, but not performance stats.
 none: Do not print any stats.</p>
 <p>Printing performance stats is also triggered by the INFO signal (where supported), or the USR1 signal. Setting the POSIXLY_CORRECT environment variable to any value (including an empty value) will cause the USR1 signal to be ignored.</p>
 </dd>
-<dt><code>--conv</code></dt>
+<dt><code>--conv=&lt;CONV&gt;</code></dt>
 <dd>(alternatively conv=CONV[,CONV]) specifies a comma-separated list of conversion options or (for legacy reasons) file flags. Conversion options and file flags may be intermixed.
 <p>Conversion options:
 One of {ascii, ebcdic, ibm} will perform an encoding conversion.
@@ -218,7 +219,7 @@ One of {excl, nocreat}
 'fdatasync' data will be written before finishing.
 'fsync' data and metadata will be written before finishing.</p>
 </dd>
-<dt><code>--iflag</code></dt>
+<dt><code>--iflag=&lt;FLAG&gt;</code></dt>
 <dd>(alternatively iflag=FLAG[,FLAG]) a comma separated list of input flags which specify how the input source is treated. FLAG may be any of the input-flags or general-flags specified below.
 <p>Input-Flags
 'count_bytes' a value to count=N will be interpreted as bytes.
@@ -235,7 +236,7 @@ One of {excl, nocreat}
 'noctty' do not assign a controlling tty.
 'nofollow' do not follow system links.</p>
 </dd>
-<dt><code>--oflag</code></dt>
+<dt><code>--oflag=&lt;FLAG&gt;</code></dt>
 <dd>(alternatively oflag=FLAG[,FLAG]) a comma separated list of output flags which specify how the output source is treated. FLAG may be any of the output-flags or general-flags specified below.
 <p>Output-Flags
 'append' open file in append mode. Consider setting conv=notrunc as well.

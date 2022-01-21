@@ -151,12 +151,13 @@
                         <h1 id="stat"><a class="header" href="#stat">stat</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Display file or file system status.
+<pre><code>stat [OPTIONS] [files]...
+</code></pre>
+<p>Display file or file system status.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--dereference</code>, <code>-L</code></dt>
 <dd>follow links</dd>
@@ -164,10 +165,10 @@ Display file or file system status.
 <dd>display file system status instead of file status</dd>
 <dt><code>--terse</code>, <code>-t</code></dt>
 <dd>print the information in terse form</dd>
-<dt><code>--format</code>, <code>-c</code></dt>
+<dt><code>--format=&lt;FORMAT&gt;</code>, <code>-c &lt;FORMAT&gt;</code></dt>
 <dd>use the specified FORMAT instead of the default;
  output a newline after each use of FORMAT</dd>
-<dt><code>--printf</code></dt>
+<dt><code>--printf=&lt;FORMAT&gt;</code></dt>
 <dd>like --format, but interpret backslash escapes,
             and do not output a mandatory trailing newline;
             if you want a newline, include 

@@ -151,18 +151,19 @@
                         <h1 id="mkfifo"><a class="header" href="#mkfifo">mkfifo</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Create a FIFO with the given name.
+<pre><code>mkfifo [OPTION]... NAME...
+</code></pre>
+<p>Create a FIFO with the given name.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--mode</code>, <code>-m</code></dt>
+<dt><code>--mode=&lt;0666&gt;</code>, <code>-m &lt;0666&gt;</code></dt>
 <dd>file permissions for the fifo</dd>
 <dt><code>-Z</code></dt>
 <dd>set the SELinux security context to default type</dd>
-<dt><code>--context</code></dt>
+<dt><code>--context=&lt;CTX&gt;</code></dt>
 <dd>like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX</dd>
 <dt></dt>
 <dd></dd>

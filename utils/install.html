@@ -151,15 +151,16 @@
                         <h1 id="install"><a class="header" href="#install">install</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Copy SOURCE to DEST or multiple SOURCE(s) to the existing
- DIRECTORY, while setting permission modes and owner/group
+<pre><code>install [OPTIONS] [--] [files]...
+</code></pre>
+<p>Copy SOURCE to DEST or multiple SOURCE(s) to the existing
+DIRECTORY, while setting permission modes and owner/group</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--backup</code></dt>
+<dt><code>--backup=&lt;CONTROL&gt;</code></dt>
 <dd>make a backup of each existing destination file</dd>
 <dt><code>-b</code></dt>
 <dd>like --backup but does not accept an argument</dd>
@@ -171,21 +172,21 @@ Copy SOURCE to DEST or multiple SOURCE(s) to the existing
 <dd>treat all arguments as directory names. create all components of the specified directories</dd>
 <dt><code>-D</code></dt>
 <dd>create all leading components of DEST except the last, then copy SOURCE to DEST</dd>
-<dt><code>--group</code>, <code>-g</code></dt>
+<dt><code>--group=&lt;GROUP&gt;</code>, <code>-g &lt;GROUP&gt;</code></dt>
 <dd>set group ownership, instead of process's current group</dd>
-<dt><code>--mode</code>, <code>-m</code></dt>
+<dt><code>--mode=&lt;MODE&gt;</code>, <code>-m &lt;MODE&gt;</code></dt>
 <dd>set permission mode (as in chmod), instead of rwxr-xr-x</dd>
-<dt><code>--owner</code>, <code>-o</code></dt>
+<dt><code>--owner=&lt;OWNER&gt;</code>, <code>-o &lt;OWNER&gt;</code></dt>
 <dd>set ownership (super-user only)</dd>
 <dt><code>--preserve-timestamps</code>, <code>-p</code></dt>
 <dd>apply access/modification times of SOURCE files to corresponding destination files</dd>
 <dt><code>--strip</code>, <code>-s</code></dt>
 <dd>strip symbol tables (no action Windows)</dd>
-<dt><code>--strip-program</code></dt>
+<dt><code>--strip-program=&lt;PROGRAM&gt;</code></dt>
 <dd>program used to strip binaries (no action Windows)</dd>
-<dt><code>--suffix</code>, <code>-S</code></dt>
+<dt><code>--suffix=&lt;SUFFIX&gt;</code>, <code>-S &lt;SUFFIX&gt;</code></dt>
 <dd>override the usual backup suffix</dd>
-<dt><code>--target-directory</code>, <code>-t</code></dt>
+<dt><code>--target-directory=&lt;DIRECTORY&gt;</code>, <code>-t &lt;DIRECTORY&gt;</code></dt>
 <dd>move all SOURCE arguments into DIRECTORY</dd>
 <dt><code>--no-target-directory</code>, <code>-T</code></dt>
 <dd>(unimplemented) treat DEST as a normal file</dd>
@@ -193,7 +194,7 @@ Copy SOURCE to DEST or multiple SOURCE(s) to the existing
 <dd>explain what is being done</dd>
 <dt><code>--preserve-context</code>, <code>-P</code></dt>
 <dd>(unimplemented) preserve security context</dd>
-<dt><code>--context</code>, <code>-Z</code></dt>
+<dt><code>--context=&lt;CONTEXT&gt;</code>, <code>-Z &lt;CONTEXT&gt;</code></dt>
 <dd>(unimplemented) set security context of files and directories</dd>
 <dt></dt>
 <dd></dd>

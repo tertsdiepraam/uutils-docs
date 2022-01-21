@@ -151,12 +151,13 @@
                         <h1 id="chgrp"><a class="header" href="#chgrp">chgrp</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Change the group of each FILE to GROUP.
+<pre><code>chgrp [OPTIONS]
+</code></pre>
+<p>Change the group of each FILE to GROUP.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
 <dl><dt><code>--help</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--changes</code>, <code>-c</code></dt>
 <dd>like verbose but report only when a change is made</dd>
@@ -174,7 +175,7 @@ Change the group of each FILE to GROUP.
 <dd>fail to operate recursively on '/'</dd>
 <dt><code>--no-preserve-root</code></dt>
 <dd>do not treat '/' specially (the default)</dd>
-<dt><code>--reference</code></dt>
+<dt><code>--reference=&lt;RFILE&gt;</code></dt>
 <dd>use RFILE's group rather than specifying GROUP values</dd>
 <dt><code>--recursive</code>, <code>-R</code></dt>
 <dd>operate on files and directories recursively</dd>

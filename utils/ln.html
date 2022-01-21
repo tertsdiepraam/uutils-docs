@@ -151,14 +151,15 @@
                         <h1 id="ln"><a class="header" href="#ln">ln</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-change file owner and group
+<pre><code>ln [OPTIONS] &lt;files&gt;...
+</code></pre>
+<p>change file owner and group</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--backup</code></dt>
+<dt><code>--backup=&lt;CONTROL&gt;</code></dt>
 <dd>make a backup of each existing destination file</dd>
 <dt><code>-b</code></dt>
 <dd>like --backup but does not accept an argument</dd>
@@ -170,9 +171,9 @@ change file owner and group
 <dd>treat LINK_NAME as a normal file if it is a symbolic link to a directory</dd>
 <dt><code>--symbolic</code>, <code>-s</code></dt>
 <dd>make symbolic links instead of hard links</dd>
-<dt><code>--suffix</code>, <code>-S</code></dt>
+<dt><code>--suffix=&lt;SUFFIX&gt;</code>, <code>-S &lt;SUFFIX&gt;</code></dt>
 <dd>override the usual backup suffix</dd>
-<dt><code>--target-directory</code>, <code>-t</code></dt>
+<dt><code>--target-directory=&lt;DIRECTORY&gt;</code>, <code>-t &lt;DIRECTORY&gt;</code></dt>
 <dd>specify the DIRECTORY in which to create the links</dd>
 <dt><code>--no-target-directory</code>, <code>-T</code></dt>
 <dd>treat LINK_NAME as a normal file always</dd>

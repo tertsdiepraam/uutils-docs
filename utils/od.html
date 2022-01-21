@@ -151,22 +151,23 @@
                         <h1 id="od"><a class="header" href="#od">od</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-dump files in octal and other formats
+<pre><code>
+</code></pre>
+<p>dump files in octal and other formats</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
 <dl><dt><code>--help</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--address-radix</code>, <code>-A</code></dt>
+<dt><code>--address-radix=&lt;RADIX&gt;</code>, <code>-A &lt;RADIX&gt;</code></dt>
 <dd>Select the base in which file offsets are printed.</dd>
-<dt><code>--skip-bytes</code>, <code>-j</code></dt>
+<dt><code>--skip-bytes=&lt;BYTES&gt;</code>, <code>-j &lt;BYTES&gt;</code></dt>
 <dd>Skip bytes input bytes before formatting and writing.</dd>
-<dt><code>--read-bytes</code>, <code>-N</code></dt>
+<dt><code>--read-bytes=&lt;BYTES&gt;</code>, <code>-N &lt;BYTES&gt;</code></dt>
 <dd>limit dump to BYTES input bytes</dd>
-<dt><code>--endian</code></dt>
+<dt><code>--endian=&lt;big|little&gt;</code></dt>
 <dd>byte order to use for multi-byte formats</dd>
-<dt><code>--strings</code>, <code>-S</code></dt>
+<dt><code>--strings=&lt;BYTES&gt;</code>, <code>-S &lt;BYTES&gt;</code></dt>
 <dd>NotImplemented: output strings of at least BYTES graphic chars. 3 is assumed when BYTES is not specified.</dd>
 <dt><code>-a</code></dt>
 <dd>named characters, ignoring high-order bit</dd>
@@ -206,11 +207,11 @@ dump files in octal and other formats
 <dd>floating point double precision (32-bit) units</dd>
 <dt><code>-F</code></dt>
 <dd>floating point double precision (64-bit) units</dd>
-<dt><code>--format</code>, <code>-t</code></dt>
+<dt><code>--format=&lt;TYPE&gt;</code>, <code>-t &lt;TYPE&gt;</code></dt>
 <dd>select output format or formats</dd>
 <dt><code>--output-duplicates</code>, <code>-v</code></dt>
 <dd>do not use * to mark line suppression</dd>
-<dt><code>--width</code>, <code>-w</code></dt>
+<dt><code>--width=&lt;BYTES&gt;</code>, <code>-w &lt;BYTES&gt;</code></dt>
 <dd>output BYTES bytes per output line. 32 is implied when BYTES is not specified.</dd>
 <dt><code>--traditional</code></dt>
 <dd>compatibility mode with one input, offset and label.</dd>

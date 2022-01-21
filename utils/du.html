@@ -151,24 +151,25 @@
                         <h1 id="du"><a class="header" href="#du">du</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-estimate file space usage
+<pre><code>du [OPTIONS] [--]
+</code></pre>
+<p>estimate file space usage</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
 <dl><dt><code>--help</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--all</code>, <code>-a</code></dt>
 <dd>write counts for all files, not just directories</dd>
 <dt><code>--apparent-size</code></dt>
 <dd>print apparent sizes,  rather  than  disk  usage although  the apparent  size is usually smaller, it may be larger due to holes in ('sparse') files, internal  fragmentation,  indirect  blocks, and the like</dd>
-<dt><code>--block-size</code>, <code>-B</code></dt>
+<dt><code>--block-size=&lt;SIZE&gt;</code>, <code>-B &lt;SIZE&gt;</code></dt>
 <dd>scale sizes  by  SIZE before printing them. E.g., '-BM' prints sizes in units of 1,048,576 bytes.  See SIZE format below.</dd>
 <dt><code>--bytes</code>, <code>-b</code></dt>
 <dd>equivalent to '--apparent-size --block-size=1'</dd>
 <dt><code>--total</code>, <code>-c</code></dt>
 <dd>produce a grand total</dd>
-<dt><code>--max-depth</code>, <code>-d</code></dt>
+<dt><code>--max-depth=&lt;N&gt;</code>, <code>-d &lt;N&gt;</code></dt>
 <dd>print the total for a directory (or file, with --all) only if it is N or fewer levels below the command line argument;  --max-depth=0 is the same as --summarize</dd>
 <dt><code>--human-readable</code>, <code>-h</code></dt>
 <dd>print sizes in human readable format (e.g., 1K 234M 2G)</dd>
@@ -192,11 +193,11 @@ estimate file space usage
 <dd>like -h, but use powers of 1000 not 1024</dd>
 <dt><code>--one-file-system</code>, <code>-x</code></dt>
 <dd>skip directories on different file systems</dd>
-<dt><code>--threshold</code>, <code>-t</code></dt>
+<dt><code>--threshold=&lt;SIZE&gt;</code>, <code>-t &lt;SIZE&gt;</code></dt>
 <dd>exclude entries smaller than SIZE if positive, or entries greater than SIZE if negative</dd>
-<dt><code>--time</code></dt>
+<dt><code>--time=&lt;WORD&gt;</code></dt>
 <dd>show time of the last modification of any file in the directory, or any of its subdirectories.  If WORD is given, show time as WORD instead of modification time: atime, access, use, ctime, status, birth or creation</dd>
-<dt><code>--time-style</code></dt>
+<dt><code>--time-style=&lt;STYLE&gt;</code></dt>
 <dd>show times using style STYLE: full-iso, long-iso, iso, +FORMAT FORMAT is interpreted like 'date'</dd>
 <dt></dt>
 <dd></dd>

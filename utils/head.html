@@ -151,21 +151,22 @@
                         <h1 id="head"><a class="header" href="#head">head</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Print the first 10 lines of each FILE to standard output.
+<pre><code>head [FLAG]... [FILE]...
+</code></pre>
+<p>Print the first 10 lines of each FILE to standard output.
 With more than one FILE, precede each with a header giving the file name.
-With no FILE, or when FILE is -, read standard input.
+With no FILE, or when FILE is -, read standard input.</p>
 <p>Mandatory arguments to long flags are mandatory for short flags too.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--bytes</code>, <code>-c</code></dt>
+<dt><code>--bytes=&lt;[-]NUM&gt;</code>, <code>-c &lt;[-]NUM&gt;</code></dt>
 <dd>print the first NUM bytes of each file;
 with the leading '-', print all but the last
 NUM bytes of each file</dd>
-<dt><code>--lines</code>, <code>-n</code></dt>
+<dt><code>--lines=&lt;[-]NUM&gt;</code>, <code>-n &lt;[-]NUM&gt;</code></dt>
 <dd>print the first NUM lines instead of the first 10;
 with the leading '-', print all but the last
 NUM lines of each file</dd>

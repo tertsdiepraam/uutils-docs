@@ -151,19 +151,20 @@
                         <h1 id="stdbuf"><a class="header" href="#stdbuf">stdbuf</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Run COMMAND, with modified buffering operations for its standard streams.
+<pre><code>stdbuf [OPTIONS] &lt;command&gt;...
+</code></pre>
+<p>Run COMMAND, with modified buffering operations for its standard streams.</p>
 <p>Mandatory arguments to long options are mandatory for short options too.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--input</code>, <code>-i</code></dt>
+<dt><code>--input=&lt;MODE&gt;</code>, <code>-i &lt;MODE&gt;</code></dt>
 <dd>adjust standard input stream buffering</dd>
-<dt><code>--output</code>, <code>-o</code></dt>
+<dt><code>--output=&lt;MODE&gt;</code>, <code>-o &lt;MODE&gt;</code></dt>
 <dd>adjust standard output stream buffering</dd>
-<dt><code>--error</code>, <code>-e</code></dt>
+<dt><code>--error=&lt;MODE&gt;</code>, <code>-e &lt;MODE&gt;</code></dt>
 <dd>adjust standard error stream buffering</dd>
 <dt></dt>
 <dd></dd>

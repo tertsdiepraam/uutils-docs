@@ -151,28 +151,29 @@
                         <h1 id="numfmt"><a class="header" href="#numfmt">numfmt</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Convert numbers from/to human-readable strings
+<pre><code>numfmt [OPTIONS]
+</code></pre>
+<p>Convert numbers from/to human-readable strings</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--delimiter</code>, <code>-d</code></dt>
+<dt><code>--delimiter=&lt;X&gt;</code>, <code>-d &lt;X&gt;</code></dt>
 <dd>use X instead of whitespace for field delimiter</dd>
-<dt><code>--field</code></dt>
+<dt><code>--field=&lt;FIELDS&gt;</code></dt>
 <dd>replace the numbers in these input fields (default=1) see FIELDS below</dd>
-<dt><code>--from</code></dt>
+<dt><code>--from=&lt;UNIT&gt;</code></dt>
 <dd>auto-scale input numbers to UNITs; see UNIT below</dd>
-<dt><code>--to</code></dt>
+<dt><code>--to=&lt;UNIT&gt;</code></dt>
 <dd>auto-scale output numbers to UNITs; see UNIT below</dd>
-<dt><code>--padding</code></dt>
+<dt><code>--padding=&lt;N&gt;</code></dt>
 <dd>pad the output to N characters; positive N will right-align; negative N will left-align; padding is ignored if the output is wider than N; the default is to automatically pad if a whitespace is found</dd>
-<dt><code>--header</code></dt>
+<dt><code>--header=&lt;N&gt;</code></dt>
 <dd>print (without converting) the first N header lines; N defaults to 1 if not specified</dd>
-<dt><code>--round</code></dt>
+<dt><code>--round=&lt;METHOD&gt;</code></dt>
 <dd>use METHOD for rounding when scaling; METHOD can be: up,down, from-zero (default), towards-zero, nearest</dd>
-<dt><code>--suffix</code></dt>
+<dt><code>--suffix=&lt;SUFFIX&gt;</code></dt>
 <dd>print SUFFIX after each formatted number, and accept inputs optionally ending with SUFFIX</dd>
 <dt></dt>
 <dd></dd>

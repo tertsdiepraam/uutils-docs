@@ -151,33 +151,34 @@
                         <h1 id="join"><a class="header" href="#join">join</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-For each pair of input lines with identical join fields, write a line to
-standard output. The default join field is the first, delimited by blanks.
+<pre><code>join [OPTIONS] &lt;FILE1&gt; &lt;FILE2&gt;
+</code></pre>
+<p>For each pair of input lines with identical join fields, write a line to
+standard output. The default join field is the first, delimited by blanks.</p>
 <p>When FILE1 or FILE2 (not both) is -, read standard input.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>-a</code></dt>
+<dt><code>-a &lt;FILENUM&gt;</code></dt>
 <dd>also print unpairable lines from file FILENUM, where
 FILENUM is 1 or 2, corresponding to FILE1 or FILE2</dd>
-<dt><code>-v</code></dt>
+<dt><code>-v &lt;FILENUM&gt;</code></dt>
 <dd>like -a FILENUM, but suppress joined output lines</dd>
-<dt><code>-e</code></dt>
+<dt><code>-e &lt;EMPTY&gt;</code></dt>
 <dd>replace missing input fields with EMPTY</dd>
 <dt><code>--ignore-case</code>, <code>-i</code></dt>
 <dd>ignore differences in case when comparing fields</dd>
-<dt><code>-j</code></dt>
+<dt><code>-j &lt;FIELD&gt;</code></dt>
 <dd>equivalent to '-1 FIELD -2 FIELD'</dd>
-<dt><code>-o</code></dt>
+<dt><code>-o &lt;FORMAT&gt;</code></dt>
 <dd>obey FORMAT while constructing output line</dd>
-<dt><code>-t</code></dt>
+<dt><code>-t &lt;CHAR&gt;</code></dt>
 <dd>use CHAR as input and output field separator</dd>
-<dt><code>-1</code></dt>
+<dt><code>-1 &lt;FIELD&gt;</code></dt>
 <dd>join on this FIELD of file 1</dd>
-<dt><code>-2</code></dt>
+<dt><code>-2 &lt;FIELD&gt;</code></dt>
 <dd>join on this FIELD of file 2</dd>
 <dt><code>--check-order</code></dt>
 <dd>check that the input is correctly sorted, even if all input lines are pairable</dd>

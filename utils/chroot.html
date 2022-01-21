@@ -151,22 +151,23 @@
                         <h1 id="chroot"><a class="header" href="#chroot">chroot</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Run COMMAND with root directory set to NEWROOT.
+<pre><code>[OPTION]... NEWROOT [COMMAND [ARG]...]
+</code></pre>
+<p>Run COMMAND with root directory set to NEWROOT.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt></dt>
 <dd></dd>
-<dt><code>--user</code>, <code>-u</code></dt>
+<dt><code>--user=&lt;USER&gt;</code>, <code>-u &lt;USER&gt;</code></dt>
 <dd>User (ID or name) to switch before running the program</dd>
-<dt><code>--group</code>, <code>-g</code></dt>
+<dt><code>--group=&lt;GROUP&gt;</code>, <code>-g &lt;GROUP&gt;</code></dt>
 <dd>Group (ID or name) to switch to</dd>
-<dt><code>--groups</code>, <code>-G</code></dt>
+<dt><code>--groups=&lt;GROUP1,GROUP2...&gt;</code>, <code>-G &lt;GROUP1,GROUP2...&gt;</code></dt>
 <dd>Comma-separated list of groups to switch to</dd>
-<dt><code>--userspec</code></dt>
+<dt><code>--userspec=&lt;USER:GROUP&gt;</code></dt>
 <dd>Colon-separated user and group to switch to. Same as -u USER -g GROUP. Userspec has higher preference than -u and/or -g</dd>
 <dt></dt>
 <dd></dd>

@@ -151,12 +151,13 @@
                         <h1 id="chown"><a class="header" href="#chown">chown</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-change file owner and group
+<pre><code>chown [OPTIONS]
+</code></pre>
+<p>change file owner and group</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
 <dl><dt><code>--help</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--changes</code>, <code>-c</code></dt>
 <dd>like verbose but report only when a change is made</dd>
@@ -164,7 +165,7 @@ change file owner and group
 <dd>affect the referent of each symbolic link (this is the default), rather than the symbolic link itself</dd>
 <dt><code>--no-dereference</code>, <code>-h</code></dt>
 <dd>affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)</dd>
-<dt><code>--from</code></dt>
+<dt><code>--from=&lt;CURRENT_OWNER:CURRENT_GROUP&gt;</code></dt>
 <dd>change the owner and/or group of each file only if its current owner and/or group match those specified here. Either may be omitted, in which case a match is not required for the omitted attribute</dd>
 <dt><code>--preserve-root</code></dt>
 <dd>fail to operate recursively on '/'</dd>
@@ -174,7 +175,7 @@ change file owner and group
 <dd>suppress most error messages</dd>
 <dt><code>--recursive</code>, <code>-R</code></dt>
 <dd>operate on files and directories recursively</dd>
-<dt><code>--reference</code></dt>
+<dt><code>--reference=&lt;RFILE&gt;</code></dt>
 <dd>use RFILE's owner and group rather than specifying OWNER:GROUP values</dd>
 <dt><code>--silent</code>, <code>-f</code></dt>
 <dd></dd>

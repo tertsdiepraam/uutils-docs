@@ -151,12 +151,13 @@
                         <h1 id="fmt"><a class="header" href="#fmt">fmt</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-Reformat paragraphs from input files (or stdin) to stdout.
+<pre><code>fmt [OPTIONS] [files]...
+</code></pre>
+<p>Reformat paragraphs from input files (or stdin) to stdout.</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
 <dt><code>--crown-margin</code>, <code>-c</code></dt>
 <dd>First and second line of paragraph may have different indentations, in which case the first line's indentation is preserved, and each subsequent line's indentation matches the second line.</dd>
@@ -168,21 +169,21 @@ Reformat paragraphs from input files (or stdin) to stdout.
 <dd>Split lines only, do not reflow.</dd>
 <dt><code>--uniform-spacing</code>, <code>-u</code></dt>
 <dd>Insert exactly one space between words, and two between sentences. Sentence breaks in the input are detected as [?!.] followed by two spaces or a newline; other punctuation is not interpreted as a sentence break.</dd>
-<dt><code>--prefix</code>, <code>-p</code></dt>
+<dt><code>--prefix=&lt;PREFIX&gt;</code>, <code>-p &lt;PREFIX&gt;</code></dt>
 <dd>Reformat only lines beginning with PREFIX, reattaching PREFIX to reformatted lines. Unless -x is specified, leading whitespace will be ignored when matching PREFIX.</dd>
-<dt><code>--skip-prefix</code>, <code>-P</code></dt>
+<dt><code>--skip-prefix=&lt;PSKIP&gt;</code>, <code>-P &lt;PSKIP&gt;</code></dt>
 <dd>Do not reformat lines beginning with PSKIP. Unless -X is specified, leading whitespace will be ignored when matching PSKIP</dd>
 <dt><code>--exact-prefix</code>, <code>-x</code></dt>
 <dd>PREFIX must match at the beginning of the line with no preceding whitespace.</dd>
 <dt><code>--exact-skip-prefix</code>, <code>-X</code></dt>
 <dd>PSKIP must match at the beginning of the line with no preceding whitespace.</dd>
-<dt><code>--width</code>, <code>-w</code></dt>
+<dt><code>--width=&lt;WIDTH&gt;</code>, <code>-w &lt;WIDTH&gt;</code></dt>
 <dd>Fill output lines up to a maximum of WIDTH columns, default 79.</dd>
-<dt><code>--goal</code>, <code>-g</code></dt>
+<dt><code>--goal=&lt;GOAL&gt;</code>, <code>-g &lt;GOAL&gt;</code></dt>
 <dd>Goal width, default ~0.94*WIDTH. Must be less than WIDTH.</dd>
 <dt><code>--quick</code>, <code>-q</code></dt>
 <dd>Break lines more quickly at the expense of a potentially more ragged appearance.</dd>
-<dt><code>--tab-width</code>, <code>-T</code></dt>
+<dt><code>--tab-width=&lt;TABWIDTH&gt;</code>, <code>-T &lt;TABWIDTH&gt;</code></dt>
 <dd>Treat tabs as TABWIDTH spaces for determining line length, default 8. Note that this is used only for calculating line lengths; tabs are preserved in the output.</dd>
 <dt></dt>
 <dd></dd>

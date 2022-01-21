@@ -151,22 +151,23 @@
                         <h1 id="csplit"><a class="header" href="#csplit">csplit</a></h1>
 <div class="version">version: 0.0.9
 </div>
-<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-split a file into sections determined by context lines
+<pre><code>csplit [OPTIONS] &lt;file&gt; &lt;pattern&gt;...
+</code></pre>
+<p>split a file into sections determined by context lines</p>
 <h2 id="options"><a class="header" href="#options">Options</a></h2>
-<dl><dt><code>--help</code></dt>
+<dl><dt><code>--help</code>, <code>-h</code></dt>
 <dd>Print help information</dd>
-<dt><code>--version</code></dt>
+<dt><code>--version</code>, <code>-V</code></dt>
 <dd>Print version information</dd>
-<dt><code>--suffix-format</code>, <code>-b</code></dt>
+<dt><code>--suffix-format=&lt;FORMAT&gt;</code>, <code>-b &lt;FORMAT&gt;</code></dt>
 <dd>use sprintf FORMAT instead of %02d</dd>
-<dt><code>--prefix</code>, <code>-f</code></dt>
+<dt><code>--prefix=&lt;PREFIX&gt;</code>, <code>-f &lt;PREFIX&gt;</code></dt>
 <dd>use PREFIX instead of 'xx'</dd>
 <dt><code>--keep-files</code>, <code>-k</code></dt>
 <dd>do not remove output files on errors</dd>
 <dt><code>--suppress-matched</code></dt>
 <dd>suppress the lines matching PATTERN</dd>
-<dt><code>--digits</code>, <code>-n</code></dt>
+<dt><code>--digits=&lt;DIGITS&gt;</code>, <code>-n &lt;DIGITS&gt;</code></dt>
 <dd>use specified number of digits instead of 2</dd>
 <dt><code>--quiet</code>, <code>--silent</code>, <code>-s</code></dt>
 <dd>do not print counts of output file sizes</dd>
